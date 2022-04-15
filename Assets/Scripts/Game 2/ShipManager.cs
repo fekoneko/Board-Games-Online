@@ -5,4 +5,5 @@ using UnityEngine;
 public class ShipManager : MonoBehaviour
 {
     [SerializeField] public GameObject[] ships;
+    public bool rotateShips = false;
 }

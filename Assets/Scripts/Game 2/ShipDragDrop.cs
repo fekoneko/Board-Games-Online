@@ -20,6 +20,8 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
     private Vector2 basePosition;
     private Vector2 pinPosition;
     private ShipSlot pinShipSlot;
+    private float rotationAngle = 0;
+    private float rotationAngleCur = 0;
 
     private void Awake()
     {
@@ -44,6 +46,11 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
         if (disabled) return;
         //Debug.Log("OnDrag");
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        if (horizontally)
+            rotationAngle = 0.01f * eventData.delta.y / (canvas.scaleFactor * Time.deltaTime);
+        else
+            rotationAngle = 0.01f * eventData.delta.x / (canvas.scaleFactor * Time.deltaTime) + 90;
+        transform.SetSiblingIndex(-1);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -58,6 +65,18 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
             SetSlotsState(true);
         }
         rectTransform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
+        
+        if (shipManagerObject.GetComponent<ShipManager>().rotateShips)
+        {
+            horizontally = false;
+            rotationAngle = 90.0f;
+        }
+        else
+        {
+            horizontally = true;
+            rotationAngle = 0.0f;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -66,6 +85,7 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
         //Debug.Log("OnEndDrag")
         canvasGroup.blocksRaycasts = true;
         dragged = false;
+        transform.SetSiblingIndex(0);
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -394,6 +414,39 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
                     rectTransform.position = Vector2.MoveTowards(rectTransform.position, basePosition, 10000 * Time.deltaTime);
                 }
             }
+        }
+
+        if (rotationAngleCur != rotationAngle)
+        {
+            float step;
+            if (!dragged || Mathf.Abs(rotationAngle - rotationAngleCur) > 20)
+                step = 500f * Time.deltaTime;
+            else
+                step = 65f * Time.deltaTime;
+            if (rotationAngle - rotationAngleCur > step)
+            {
+                rotationAngleCur += step;
+            }
+            else if (rotationAngleCur - rotationAngle > step)
+            {
+                rotationAngleCur -= step;
+            }
+            else
+            {
+                rotationAngleCur = rotationAngle;
+            }
+            rectTransform.rotation = Quaternion.AngleAxis(rotationAngleCur, Vector3.back);
+
+            if (horizontally)
+                rotationAngle = 0.0f;
+            else
+                rotationAngle = 90.0f;
+        }
+
+        if (!dragged && !pinned)
+        {
+            horizontally = true;
+            rotationAngle = 0.0f;
         }
     }
 }

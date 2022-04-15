@@ -6,22 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class NavButton : MonoBehaviour
 {
-    public string gameSceneName = "";
+    [SerializeField] private string gameSceneName = "";
     
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         Button btn = this.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         
     }
 
-    void TaskOnClick()
+    private void TaskOnClick()
     {
         SceneManager.LoadSceneAsync(gameSceneName);
     }
