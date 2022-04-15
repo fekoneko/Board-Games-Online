@@ -20,7 +20,11 @@ public class ShipSlot : MonoBehaviour, IDropHandler
     {
         rectTransform = GetComponent<RectTransform>();
         image = GetComponent<Image>();
-        cells = slotManagerObject.GetComponent<SlotManager>().cells;
+    }
+
+    public void Start()
+    {
+        cells = slotManagerObject.GetComponent<SlotManager>().cells; // Must be later than Awake of SlotManager
     }
 
     public void OnDrop(PointerEventData eventData)

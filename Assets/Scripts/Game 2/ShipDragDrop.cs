@@ -25,12 +25,12 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
     {
         rectTransform = GetComponent<RectTransform>(); 
         canvasGroup = GetComponent<CanvasGroup>();
-        ships = shipManagerObject.GetComponent<ShipManager>().ships;
     }
 
     public void Start()
     {
         basePosition = rectTransform.position;
+        ships = shipManagerObject.GetComponent<ShipManager>().ships;
     }
 
     public void OnPointerDown(PointerEventData eventData)

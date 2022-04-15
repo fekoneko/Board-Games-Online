@@ -21,16 +21,16 @@ public class SlotManager : MonoBehaviour
     private void Awake()
     {
         cells = new GameObject[][] { null, null, null, null, null, null, null, null, null, null };
-        cells[0] = new GameObject[] { null, null, null, null, null, null, null, null, null, null};
-        cells[1] = new GameObject[] { null, null, null, null, null, null, null, null, null, null};
-        cells[2] = new GameObject[] { null, null, null, null, null, null, null, null, null, null};
-        cells[3] = new GameObject[] { null, null, null, null, null, null, null, null, null, null};
-        cells[4] = new GameObject[] { null, null, null, null, null, null, null, null, null, null};
-        cells[5] = new GameObject[] { null, null, null, null, null, null, null, null, null, null};
-        cells[6] = new GameObject[] { null, null, null, null, null, null, null, null, null, null};
-        cells[7] = new GameObject[] { null, null, null, null, null, null, null, null, null, null};
-        cells[8] = new GameObject[] { null, null, null, null, null, null, null, null, null, null};
-        cells[9] = new GameObject[] { null, null, null, null, null, null, null, null, null, null};
+        cells[0] = new GameObject[] { null, null, null, null, null, null, null, null, null, null };
+        cells[1] = new GameObject[] { null, null, null, null, null, null, null, null, null, null };
+        cells[2] = new GameObject[] { null, null, null, null, null, null, null, null, null, null };
+        cells[3] = new GameObject[] { null, null, null, null, null, null, null, null, null, null };
+        cells[4] = new GameObject[] { null, null, null, null, null, null, null, null, null, null };
+        cells[5] = new GameObject[] { null, null, null, null, null, null, null, null, null, null };
+        cells[6] = new GameObject[] { null, null, null, null, null, null, null, null, null, null };
+        cells[7] = new GameObject[] { null, null, null, null, null, null, null, null, null, null };
+        cells[8] = new GameObject[] { null, null, null, null, null, null, null, null, null, null };
+        cells[9] = new GameObject[] { null, null, null, null, null, null, null, null, null, null };
         Array.Copy(cells0, cells[0], 10);
         Array.Copy(cells1, cells[1], 10);
         Array.Copy(cells2, cells[2], 10);
