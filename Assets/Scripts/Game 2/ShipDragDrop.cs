@@ -19,7 +19,7 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
     {
         rectTransform = GetComponent<RectTransform>(); 
         canvasGroup = GetComponent<CanvasGroup>();
-        basePosition = rectTransform.anchoredPosition;
+        basePosition = rectTransform.position;
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -87,14 +87,14 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
             {
                 if (rectTransform.anchoredPosition != pinPosition)
                 {
-                    rectTransform.position = Vector2.MoveTowards(rectTransform.anchoredPosition, pinPosition, 10);
+                    rectTransform.position = Vector2.MoveTowards(rectTransform.position, pinPosition, 16);
                 }
             }
             else // Jump back to base
             {
                 if (rectTransform.anchoredPosition != basePosition)
                 {
-                    rectTransform.position = Vector2.MoveTowards(rectTransform.anchoredPosition, basePosition, 10);
+                    rectTransform.position = Vector2.MoveTowards(rectTransform.position, basePosition, 16);
                 }
             }
         }

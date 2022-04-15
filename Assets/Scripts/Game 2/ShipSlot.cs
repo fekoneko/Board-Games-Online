@@ -26,7 +26,7 @@ public class ShipSlot : MonoBehaviour, IDropHandler
         if (eventData.pointerDrag != null)
         {
             ShipDragDrop itemDragDrop = eventData.pointerDrag.GetComponent<ShipDragDrop>();
-            itemDragDrop.Pin(rectTransform.anchoredPosition, this);
+            itemDragDrop.Pin(rectTransform.position, this);
         }
     }
 
