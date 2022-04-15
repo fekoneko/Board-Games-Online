@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class ShipSlot : MonoBehaviour, IDropHandler
 {
-    public Vector2 cell;
+    [SerializeField] public Vector2 cell;
 
     private RectTransform rectTransform;
     private Image image;

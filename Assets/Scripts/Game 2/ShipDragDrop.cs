@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
+    [SerializeField] private Canvas canvas;
+
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
@@ -19,6 +21,10 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
     {
         rectTransform = GetComponent<RectTransform>(); 
         canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    public void Start()
+    {
         basePosition = rectTransform.position;
     }
 
@@ -32,7 +38,7 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
     {
         if (disabled) return;
         //Debug.Log("OnDrag");
-        rectTransform.anchoredPosition += eventData.delta;
+        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
