@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class RotateButton : MonoBehaviour
 {
     [SerializeField] private GameObject shipManagerObject;
+    [SerializeField] private GameObject arrow;
 
     private ShipManager shipManager;
     private Image image;
+    private float arrowAngle = 90.0f;
 
     // Start is called before the first frame update
     public void Start()
@@ -23,14 +25,28 @@ public class RotateButton : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        float step = 550f * Time.deltaTime;
         if (shipManager.rotateShips)
         {
-            image.color = new Color(0.7f, 0.7f, 0.7f);
+            if (arrowAngle > step)
+                arrowAngle -= step;
+            else
+            {
+                if (arrowAngle == 0f) return; /////////////////// !
+                arrowAngle = 0f;
+            }
         }
         else
         {
-            image.color = Color.white;
+            if (90f - arrowAngle > step)
+                arrowAngle += step;
+            else
+            {
+                if (arrowAngle == 90f) return; /////////////////// !
+                arrowAngle = 90f;
+            }
         }
+        arrow.GetComponent<RectTransform>().rotation = Quaternion.AngleAxis(arrowAngle, Vector3.back);
     }
 
     private void TaskOnClick()

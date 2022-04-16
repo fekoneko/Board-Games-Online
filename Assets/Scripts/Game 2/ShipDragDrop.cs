@@ -7,6 +7,7 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
 {
     [SerializeField] private Canvas canvas;
     [SerializeField] private GameObject shipManagerObject;
+    [SerializeField] private GameObject[] shipPartList;
     [SerializeField] public int size;
     [SerializeField] public bool horizontally;
 
@@ -63,6 +64,11 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
         {
             pinned = false;
             SetSlotsState(true);
+
+            foreach (GameObject i in shipPartList)
+            {
+                i.GetComponent<ShipPartManager>().HideEquipment();
+            }
         }
         rectTransform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
@@ -100,6 +106,11 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
         pinShipSlot = itemSlot;
         pinned = true;
         SetSlotsState(false);
+
+        foreach (GameObject i in shipPartList)
+        {
+            i.GetComponent<ShipPartManager>().ShowEquipment();
+        }
     }
 
     public void SetSlotsState(bool en)

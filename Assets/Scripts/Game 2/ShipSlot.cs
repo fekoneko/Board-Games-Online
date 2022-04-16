@@ -142,7 +142,7 @@ public class ShipSlot : MonoBehaviour, IDropHandler
         }
         else
         {
-            image.color = new Color(0.7f, 0.7f, 0.7f);
+            image.color = new Color(0.96f, 0.96f, 1.0f);
         }
     }
 
