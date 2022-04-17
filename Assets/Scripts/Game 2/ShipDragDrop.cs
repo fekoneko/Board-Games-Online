@@ -94,6 +94,11 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
         //Debug.Log("OnDrop");
     }
 
+    public ShipSlot GetPinShipSlot()
+    {
+        return pinShipSlot;
+    }
+
     public void Pin(Vector2 pinPos, ShipSlot itemSlot)
     {
         pinPosition = pinPos;

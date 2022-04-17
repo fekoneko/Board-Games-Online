@@ -8,6 +8,7 @@ public class ReadyButton : MonoBehaviour
     [SerializeField] private GameObject textObject;
     [SerializeField] private GameObject shipManagerObject;
     [SerializeField] private GameObject slotManagerObject;
+    [SerializeField] private GameObject serverControllerObject;
     [SerializeField] private GameObject rotateButtonObject;
     [SerializeField] private GameObject randomButtonObject;
     [SerializeField] private GameObject slotsObject;
@@ -19,6 +20,7 @@ public class ReadyButton : MonoBehaviour
     private Text text;
     private ShipManager shipManager;
     private SlotManager slotManager;
+    private ServerController serverController;
     private bool waiting = false;
     private float waitingTime = 0.0f;
     private float waitingTimePr = -1.0f;
@@ -43,6 +45,7 @@ public class ReadyButton : MonoBehaviour
         text = textObject.GetComponent<Text>();
         shipManager = shipManagerObject.GetComponent<ShipManager>();
         slotManager = slotManagerObject.GetComponent<SlotManager>();
+        serverController = serverControllerObject.GetComponent<ServerController>();
 
 
         waitingBannerImageObject = new GameObject();
