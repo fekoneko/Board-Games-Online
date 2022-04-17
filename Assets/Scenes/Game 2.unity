@@ -9136,7 +9136,7 @@ MonoBehaviour:
   textObject: {fileID: 332772747}
   shipManagerObject: {fileID: 747393461}
   slotManagerObject: {fileID: 1704128328}
-  serverControllerObject: {fileID: 0}
+  serverControllerObject: {fileID: 1016549125}
   rotateButtonObject: {fileID: 306836567}
   randomButtonObject: {fileID: 55118946}
   slotsObject: {fileID: 1704128328}
