@@ -9,6 +9,7 @@ public class ReadyButton : MonoBehaviour
     [SerializeField] private GameObject shipManagerObject;
     [SerializeField] private GameObject slotManagerObject;
     [SerializeField] private GameObject rotateButtonObject;
+    [SerializeField] private GameObject randomButtonObject;
     [SerializeField] private GameObject slotsObject;
     [SerializeField] private GameObject opponentSlotsObject;
     [SerializeField] private Sprite[] waitingBannerImageList;
@@ -154,6 +155,7 @@ public class ReadyButton : MonoBehaviour
             slotManager.SetAvailableShow(false);
 
             Destroy(rotateButtonObject);
+            Destroy(randomButtonObject);
 
             button.interactable = false;
             waiting = true;

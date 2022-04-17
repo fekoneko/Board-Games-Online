@@ -9137,6 +9137,7 @@ MonoBehaviour:
   shipManagerObject: {fileID: 747393461}
   slotManagerObject: {fileID: 1704128328}
   rotateButtonObject: {fileID: 306836567}
+  randomButtonObject: {fileID: 55118946}
   slotsObject: {fileID: 1704128328}
   opponentSlotsObject: {fileID: 1307698513}
   waitingBannerImageList:
