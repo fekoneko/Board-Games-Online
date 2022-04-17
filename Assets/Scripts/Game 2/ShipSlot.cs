@@ -34,104 +34,110 @@ public class ShipSlot : MonoBehaviour, IDropHandler
         //Debug.Log("OnDrop (ItemSlot)");
         if (eventData.pointerDrag != null)
         {
-            bool canBeDropped = true;
-            ShipDragDrop itemDragDrop = eventData.pointerDrag.GetComponent<ShipDragDrop>();
-            switch (itemDragDrop.size)
+            if (CheckCanBeDropped(eventData.pointerDrag))
             {
-                case 1:
-                    // [p]
-                    //canBeDropped = true;
-                    break;
-                case 2:
-                    // [p][ ]
-                    //
-                    // [p]
-                    // [ ]
-                    if (itemDragDrop.horizontally)
-                    {
-                        if ((int)cell.x + 1 < 10)
-                        {
-                            canBeDropped = canBeDropped && !cells[(int)cell.y][(int)cell.x + 1].GetComponent<ShipSlot>().disabled;
-                        }
-                        else
-                        { canBeDropped = false; break; }
-                    }
-                    else
-                    {
-                        if ((int)cell.y + 1 < 10)
-                        {
-                            canBeDropped = canBeDropped && !cells[(int)cell.y + 1][(int)cell.x].GetComponent<ShipSlot>().disabled;
-                        }
-                        else
-                        { canBeDropped = false; break; }
-                    }
-                    break;
-                case 3:
-                    // [ ][p][ ]
-                    //
-                    // [ ]
-                    // [p]
-                    // [ ]
-                    if (itemDragDrop.horizontally)
-                    {
-                        if ((int)cell.x + 1 < 10 && (int)cell.x - 1 > -1)
-                        {
-                            canBeDropped = canBeDropped && !cells[(int)cell.y][(int)cell.x + 1].GetComponent<ShipSlot>().disabled;
-                            canBeDropped = canBeDropped && !cells[(int)cell.y][(int)cell.x - 1].GetComponent<ShipSlot>().disabled;
-                        }
-                        else
-                        { canBeDropped = false; break; }
-                    }
-                    else
-                    {
-                        if ((int)cell.y + 1 < 10 && (int)cell.y - 1 > -1)
-                        {
-                            canBeDropped = canBeDropped && !cells[(int)cell.y + 1][(int)cell.x].GetComponent<ShipSlot>().disabled;
-                            canBeDropped = canBeDropped && !cells[(int)cell.y - 1][(int)cell.x].GetComponent<ShipSlot>().disabled;
-                        }
-                        else
-                        { canBeDropped = false; break; }
-                    }
-                    break;
-                case 4:
-                    // [ ][p][ ][ ]
-                    //
-                    // [ ]
-                    // [p]
-                    // [ ]
-                    // [ ]
-                    if (itemDragDrop.horizontally)
-                    {
-                        if ((int)cell.x + 2 < 10 && (int)cell.x - 1 > -1)
-                        {
-                            canBeDropped = canBeDropped && !cells[(int)cell.y][(int)cell.x + 1].GetComponent<ShipSlot>().disabled;
-                            canBeDropped = canBeDropped && !cells[(int)cell.y][(int)cell.x + 2].GetComponent<ShipSlot>().disabled;
-                            canBeDropped = canBeDropped && !cells[(int)cell.y][(int)cell.x - 1].GetComponent<ShipSlot>().disabled;
-                        }
-                        else
-                        { canBeDropped = false; break; }
-                    }
-                    else
-                    {
-                        if ((int)cell.y + 2 < 10 && (int)cell.y - 1 > -1)
-                        {
-                            canBeDropped = canBeDropped && !cells[(int)cell.y + 1][(int)cell.x].GetComponent<ShipSlot>().disabled;
-                            canBeDropped = canBeDropped && !cells[(int)cell.y + 2][(int)cell.x].GetComponent<ShipSlot>().disabled;
-                            canBeDropped = canBeDropped && !cells[(int)cell.y - 1][(int)cell.x].GetComponent<ShipSlot>().disabled;
-                        }
-                        else
-                        { canBeDropped = false; break; }
-                    }
-                    break;
-                default:
-                    canBeDropped = false;
-                    break;
-            }
-            if (canBeDropped)
-            {
-                itemDragDrop.Pin(rectTransform.position, this);
+                eventData.pointerDrag.GetComponent<ShipDragDrop>().Pin(rectTransform.position, this);
             }
         }
+    }
+
+    public bool CheckCanBeDropped(GameObject shipObject)
+    {
+        if (disabled) return false;
+        bool canBeDropped = true;
+        ShipDragDrop itemDragDrop = shipObject.GetComponent<ShipDragDrop>();
+        switch (itemDragDrop.size)
+        {
+            case 1:
+                // [p]
+                //canBeDropped = true;
+                break;
+            case 2:
+                // [p][ ]
+                //
+                // [p]
+                // [ ]
+                if (itemDragDrop.horizontally)
+                {
+                    if ((int)cell.x + 1 < 10)
+                    {
+                        canBeDropped = canBeDropped && !cells[(int)cell.y][(int)cell.x + 1].GetComponent<ShipSlot>().disabled;
+                    }
+                    else
+                    { canBeDropped = false; break; }
+                }
+                else
+                {
+                    if ((int)cell.y + 1 < 10)
+                    {
+                        canBeDropped = canBeDropped && !cells[(int)cell.y + 1][(int)cell.x].GetComponent<ShipSlot>().disabled;
+                    }
+                    else
+                    { canBeDropped = false; break; }
+                }
+                break;
+            case 3:
+                // [ ][p][ ]
+                //
+                // [ ]
+                // [p]
+                // [ ]
+                if (itemDragDrop.horizontally)
+                {
+                    if ((int)cell.x + 1 < 10 && (int)cell.x - 1 > -1)
+                    {
+                        canBeDropped = canBeDropped && !cells[(int)cell.y][(int)cell.x + 1].GetComponent<ShipSlot>().disabled;
+                        canBeDropped = canBeDropped && !cells[(int)cell.y][(int)cell.x - 1].GetComponent<ShipSlot>().disabled;
+                    }
+                    else
+                    { canBeDropped = false; break; }
+                }
+                else
+                {
+                    if ((int)cell.y + 1 < 10 && (int)cell.y - 1 > -1)
+                    {
+                        canBeDropped = canBeDropped && !cells[(int)cell.y + 1][(int)cell.x].GetComponent<ShipSlot>().disabled;
+                        canBeDropped = canBeDropped && !cells[(int)cell.y - 1][(int)cell.x].GetComponent<ShipSlot>().disabled;
+                    }
+                    else
+                    { canBeDropped = false; break; }
+                }
+                break;
+            case 4:
+                // [ ][p][ ][ ]
+                //
+                // [ ]
+                // [p]
+                // [ ]
+                // [ ]
+                if (itemDragDrop.horizontally)
+                {
+                    if ((int)cell.x + 2 < 10 && (int)cell.x - 1 > -1)
+                    {
+                        canBeDropped = canBeDropped && !cells[(int)cell.y][(int)cell.x + 1].GetComponent<ShipSlot>().disabled;
+                        canBeDropped = canBeDropped && !cells[(int)cell.y][(int)cell.x + 2].GetComponent<ShipSlot>().disabled;
+                        canBeDropped = canBeDropped && !cells[(int)cell.y][(int)cell.x - 1].GetComponent<ShipSlot>().disabled;
+                    }
+                    else
+                    { canBeDropped = false; break; }
+                }
+                else
+                {
+                    if ((int)cell.y + 2 < 10 && (int)cell.y - 1 > -1)
+                    {
+                        canBeDropped = canBeDropped && !cells[(int)cell.y + 1][(int)cell.x].GetComponent<ShipSlot>().disabled;
+                        canBeDropped = canBeDropped && !cells[(int)cell.y + 2][(int)cell.x].GetComponent<ShipSlot>().disabled;
+                        canBeDropped = canBeDropped && !cells[(int)cell.y - 1][(int)cell.x].GetComponent<ShipSlot>().disabled;
+                    }
+                    else
+                    { canBeDropped = false; break; }
+                }
+                break;
+            default:
+                canBeDropped = false;
+                break;
+        }
+        return canBeDropped;
     }
 
     public void SetState(bool en)

@@ -62,13 +62,7 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
         dragged = true;
         if (pinned)
         {
-            pinned = false;
-            SetSlotsState(true);
-
-            foreach (GameObject i in shipPartList)
-            {
-                i.GetComponent<ShipPartManager>().HideEquipment();
-            }
+            Unpin();
         }
         rectTransform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
@@ -113,8 +107,20 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
         }
     }
 
+    public void Unpin()
+    {
+        pinned = false;
+        SetSlotsState(true);
+
+        foreach (GameObject i in shipPartList)
+        {
+            i.GetComponent<ShipPartManager>().HideEquipment();
+        }
+    }
+
     public void SetSlotsState(bool en)
     {
+        if (pinShipSlot == null) return;
         int px = (int)pinShipSlot.cell.x;
         int py = (int)pinShipSlot.cell.y;
         GameObject[][] cells = pinShipSlot.cells;
