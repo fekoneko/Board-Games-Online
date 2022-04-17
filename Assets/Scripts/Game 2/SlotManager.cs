@@ -42,4 +42,15 @@ public class SlotManager : MonoBehaviour
         Array.Copy(cells8, cells[8], 10);
         Array.Copy(cells9, cells[9], 10);
     }
+
+    public void SetAvailableShow(bool en)
+    {
+        foreach (GameObject[] j in cells)
+        {
+            foreach (GameObject i in j)
+            {
+                i.GetComponent<ShipSlot>().SetAvailableShow(en);
+            }
+        }
+    }
 }

@@ -26,7 +26,7 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
 
     private void Awake()
     {
-        rectTransform = GetComponent<RectTransform>(); 
+        rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
@@ -72,7 +72,7 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
         }
         rectTransform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
-        
+
         if (shipManagerObject.GetComponent<ShipManager>().rotateShips)
         {
             horizontally = false;
@@ -401,63 +401,66 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
         }
     }
 
-    public void Enable() { disabled = false; }
-
-    public void Disable() { disabled = true; }
+    public void SetState(bool en) { disabled = !en; }
 
     public bool CheckEnabled() { return !disabled; }
 
+    public bool CheckPinned() { return pinned; }
+
     public void Update()
     {
-        if (!dragged)
+        if (!disabled)
         {
-            if (pinned) // Jump back in slot
+            if (!dragged)
             {
-                if (rectTransform.anchoredPosition != pinPosition)
+                if (pinned) // Jump back in slot
                 {
-                    rectTransform.position = Vector2.MoveTowards(rectTransform.position, pinPosition, 10000*Time.deltaTime);
+                    if (rectTransform.anchoredPosition != pinPosition)
+                    {
+                        rectTransform.position = Vector2.MoveTowards(rectTransform.position, pinPosition, 10000 * Time.deltaTime);
+                    }
+                }
+                else // Jump back to base
+                {
+                    if (rectTransform.anchoredPosition != basePosition)
+                    {
+                        rectTransform.position = Vector2.MoveTowards(rectTransform.position, basePosition, 10000 * Time.deltaTime);
+                    }
                 }
             }
-            else // Jump back to base
+
+            if (rotationAngleCur != rotationAngle)
             {
-                if (rectTransform.anchoredPosition != basePosition)
+                float step;
+                if (!dragged || Mathf.Abs(rotationAngle - rotationAngleCur) > 20)
+                    step = 500f * Time.deltaTime;
+                else
+                    step = 65f * Time.deltaTime;
+                if (rotationAngle - rotationAngleCur > step)
                 {
-                    rectTransform.position = Vector2.MoveTowards(rectTransform.position, basePosition, 10000 * Time.deltaTime);
+                    rotationAngleCur += step;
                 }
-            }
-        }
+                else if (rotationAngleCur - rotationAngle > step)
+                {
+                    rotationAngleCur -= step;
+                }
+                else
+                {
+                    rotationAngleCur = rotationAngle;
+                }
+                rectTransform.rotation = Quaternion.AngleAxis(rotationAngleCur, Vector3.back);
 
-        if (rotationAngleCur != rotationAngle)
-        {
-            float step;
-            if (!dragged || Mathf.Abs(rotationAngle - rotationAngleCur) > 20)
-                step = 500f * Time.deltaTime;
-            else
-                step = 65f * Time.deltaTime;
-            if (rotationAngle - rotationAngleCur > step)
-            {
-                rotationAngleCur += step;
+                if (horizontally)
+                    rotationAngle = 0.0f;
+                else
+                    rotationAngle = 90.0f;
             }
-            else if (rotationAngleCur - rotationAngle > step)
-            {
-                rotationAngleCur -= step;
-            }
-            else
-            {
-                rotationAngleCur = rotationAngle;
-            }
-            rectTransform.rotation = Quaternion.AngleAxis(rotationAngleCur, Vector3.back);
 
-            if (horizontally)
+            if (!dragged && !pinned)
+            {
+                horizontally = true;
                 rotationAngle = 0.0f;
-            else
-                rotationAngle = 90.0f;
-        }
-
-        if (!dragged && !pinned)
-        {
-            horizontally = true;
-            rotationAngle = 0.0f;
+            }
         }
     }
 }

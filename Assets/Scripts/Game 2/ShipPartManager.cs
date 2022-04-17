@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,14 +19,15 @@ public class ShipPartManager : MonoBehaviour
         shipPartEquipmentImage.enabled = false;
         shipPartEquipment.GetComponent<RectTransform>().SetParent(this.transform);
         shipPartEquipment.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
-        shipPartEquipmentImage.rectTransform.sizeDelta = new Vector2(60, 60);
+        shipPartEquipment.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+        shipPartEquipmentImage.rectTransform.sizeDelta = new Vector2(90, 90);
         shipPartEquipment.GetComponent<RectTransform>().Rotate(Vector3.back, -90f);
         shipPartEquipment.SetActive(true);
     }
 
     public void ShowEquipment()
     {
-        int randomNum = Random.Range(0, 15);
+        int randomNum = UnityEngine.Random.Range(0, equipmentList.Length);
         shipPartEquipmentImage.sprite = equipmentList[randomNum];
         shipPartEquipmentImage.enabled = true;
     }

@@ -15,6 +15,7 @@ public class ShipSlot : MonoBehaviour, IDropHandler
     private Image image;
 
     private bool disabled = false;
+    private bool availableShow = true;
 
     private void Awake()
     {
@@ -136,7 +137,7 @@ public class ShipSlot : MonoBehaviour, IDropHandler
     public void SetState(bool en)
     {
         disabled = !en;
-        if (en)
+        if (en || !availableShow)
         {
             image.color = Color.white;
         }
@@ -146,5 +147,14 @@ public class ShipSlot : MonoBehaviour, IDropHandler
         }
     }
 
-    public bool CheckEnabled() { return !disabled; }
+    public bool CheckEnabled()
+    {
+        return !disabled;
+    }
+
+    public void SetAvailableShow(bool en)
+    {
+        availableShow = en;
+        SetState(!disabled); // Update color
+    }
 }
