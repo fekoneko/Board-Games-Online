@@ -157,6 +157,8 @@ public class ReadyButton : MonoBehaviour
             shipManager.SetShipDragging(false);
             slotManager.SetAvailableShow(false);
 
+            serverController.ServerSendReady();
+
             Destroy(rotateButtonObject);
             Destroy(randomButtonObject);
 

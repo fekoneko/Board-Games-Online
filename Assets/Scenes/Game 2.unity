@@ -12754,6 +12754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipManagerObject: {fileID: 747393461}
+  readyButtonObject: {fileID: 779728568}
 --- !u!1 &1042796321
 GameObject:
   m_ObjectHideFlags: 0
