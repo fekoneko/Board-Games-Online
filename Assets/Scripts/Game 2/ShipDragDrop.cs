@@ -23,8 +23,8 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
     private Vector2 basePosition;
     private Vector2 pinPosition;
     private ShipSlot pinShipSlot;
-    private float rotationAngle = 0;
-    private float rotationAngleCur = 0;
+    public float rotationAngle = 0;
+    public float rotationAngleCur = 0;
 
     private void Awake()
     {

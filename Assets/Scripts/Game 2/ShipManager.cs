@@ -99,10 +99,14 @@ public class ShipManager : MonoBehaviour
                     if (!hor)
                     {
                         shipCur.transform.rotation = Quaternion.AngleAxis(90f, Vector3.back);
-                    }
+                        shipCur.rotationAngle = 90;
+                        shipCur.rotationAngleCur = 90;
+}
                     else
                     {
                         shipCur.transform.rotation = Quaternion.AngleAxis(0f, Vector3.back);
+                        shipCur.rotationAngle = 0;
+                        shipCur.rotationAngleCur = 0;
                     }
                     break;
                 }
