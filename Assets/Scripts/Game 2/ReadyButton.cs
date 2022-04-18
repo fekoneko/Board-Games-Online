@@ -13,6 +13,7 @@ public class ReadyButton : MonoBehaviour
     [SerializeField] private GameObject randomButtonObject;
     [SerializeField] private GameObject slotsObject;
     [SerializeField] private GameObject opponentSlotsObject;
+    [SerializeField] private GameObject thisObject;
     [SerializeField] private Sprite[] waitingBannerImageList;
     [SerializeField] private string[] waitingBannerTextList;
 
@@ -146,7 +147,7 @@ public class ReadyButton : MonoBehaviour
                     Destroy(waitingBannerImageObject);
                     Destroy(waitingBannerTextObject);
                 }
-                Destroy(this);
+                Destroy(thisObject);
             }
         }
     }

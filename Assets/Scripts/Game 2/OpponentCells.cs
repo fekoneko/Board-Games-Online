@@ -8,10 +8,10 @@ public class OpponentCells : MonoBehaviour
 {
     [SerializeField] public Vector2 cell;
     [SerializeField] private GameObject slotManagerObject;
-    [SerializeField] private Sprite MissedCellSprite;
-    [SerializeField] private Sprite DamagedCellSprite;
-    [SerializeField] private Sprite PaintedCellSprite;
-    [SerializeField] private Sprite[] ShootSpriteList;
+    [SerializeField] private Sprite missedCellSprite;
+    [SerializeField] private Sprite damagedCellSprite;
+    [SerializeField] private Sprite paintedCellSprite;
+    [SerializeField] private Sprite[] shootSpriteList;
 
     public GameObject[][] cells;
 
@@ -26,6 +26,9 @@ public class OpponentCells : MonoBehaviour
     private float shootImageTime = -1.0f;
     private float shootImageTimePr = -0.1f;
     private int shootImageStep = 0;
+    public bool damaged = false;
+    public bool missed = false;
+    public bool painted = false;
 
     private void Awake()
     {
@@ -65,11 +68,11 @@ public class OpponentCells : MonoBehaviour
     {
         if (shootImageTime > -1.0f)
         {
-            if (shootImageTime < ShootSpriteList.Length * 0.1)
+            if (shootImageTime < shootSpriteList.Length * 0.1)
             {
-                if (shootImageTime - shootImageTimePr > 0.1 && shootImageStep < ShootSpriteList.Length)
+                if (shootImageTime - shootImageTimePr > 0.1 && shootImageStep < shootSpriteList.Length)
                 {
-                    shootImage.sprite = ShootSpriteList[shootImageStep];
+                    shootImage.sprite = shootSpriteList[shootImageStep];
                     shootImageStep++;
                     shootImageTimePr += 0.1f;
                 }
@@ -90,7 +93,25 @@ public class OpponentCells : MonoBehaviour
     public void MakeDamaged()
     {
         cellImage.enabled = true;
-        cellImage.sprite = DamagedCellSprite;
+        cellImage.sprite = damagedCellSprite;
+        damaged = true;
+        button.interactable = false;
+    }
+
+    public void MakeMissed()
+    {
+        cellImage.enabled = true;
+        cellImage.sprite = missedCellSprite;
+        missed = true;
+        button.interactable = false;
+    }
+
+    public void MakePainted()
+    {
+        cellImage.enabled = true;
+        cellImage.sprite = paintedCellSprite;
+        painted = true;
+        button.interactable = false;
     }
 
     private void TaskOnClick()
@@ -102,6 +123,6 @@ public class OpponentCells : MonoBehaviour
         shootImageStep = 0;
 
         shootImage.enabled = true;
-        shootImage.sprite = ShootSpriteList[0];
+        shootImage.sprite = shootSpriteList[0];
     }
 }
