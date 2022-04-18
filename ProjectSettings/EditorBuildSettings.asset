@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Queue Screen 2.unity
+    guid: d6822a433fe655743969c234a87bb7de
+  - enabled: 1
     path: Assets/Scenes/Game 1.unity
     guid: e11062520a5c3824791413a73b95609e
   - enabled: 1

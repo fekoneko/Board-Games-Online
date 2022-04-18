@@ -16,6 +16,11 @@ public class ServerController : MonoBehaviour
 
 
 
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     void Start()
     {
         shipManager = shipManagerObject.GetComponent<ShipManager>();

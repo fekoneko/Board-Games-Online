@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class NavButton : MonoBehaviour
 {
-    [SerializeField] private string gameSceneName = "";
+    [SerializeField] private string sceneName = "";
+    [SerializeField] private bool breakConnection = false;
     
     // Start is called before the first frame update
     public void Start()
@@ -23,6 +24,16 @@ public class NavButton : MonoBehaviour
 
     private void TaskOnClick()
     {
-        SceneManager.LoadSceneAsync(gameSceneName);
+        SceneManager.LoadScene(sceneName);
+
+        if (breakConnection)
+        {
+            BreakConnection();
+        }
+    }
+
+    private void BreakConnection()
+    {
+        // Something Here
     }
 }
