@@ -10,15 +10,8 @@ public class ServerController : MonoBehaviour
     private ShipManager shipManager;
     private ReadyButton readyButton;
 
-    private bool readyWaitForAnswer = false;
-    private bool shootWaitForAnswer = false;
     private int gameTurn = 0;
 
-    private struct Ship
-    {
-        public Vector2Int start;
-        public Vector2Int end;
-    }
 
 
     void Start()
@@ -33,62 +26,14 @@ public class ServerController : MonoBehaviour
     }
 
 
-    // Server send
-
-    // Tell server that the player is ready to start and send ship positions
-    public void ServerSendReady() // Call is in ReadyButton
-    {
-        Ship[] shipPos = GetShipPositions();
-        string json = "Ready\n";
-        foreach (Ship i in shipPos)
-        {
-            json += JsonUtility.ToJson(i) + "\n";
-        }
-        ServerSend(json);
-
-        readyWaitForAnswer = true;
-    }
-
-    // Send position which player chose
-    public void ServerSendShoot(Vector2Int shootPos)
-    {
-        string json = "Shoot\n";
-        json += JsonUtility.ToJson(shootPos) + "\n";
-        ServerSend(json);
-
-        shootWaitForAnswer = true;
-    }
-
-    private void ServerSend(string message)
-    {
-        // Something here
-
-        Debug.Log("Sent to server:\n\n" + message);
-    }
-
-
-    // Server recieve
-
     public void GameStart()
     {
-        if (readyWaitForAnswer)
-        {
-            readyButton.startGame();
-
-            readyWaitForAnswer = false;
-        }
-        // Else server did something wrong, game cannot be started
+        readyButton.startGame();
     }
 
     public void ShootCallback(int callback)
     {
-        if (shootWaitForAnswer)
-        {
-            // Something here
-
-            shootWaitForAnswer = false;
-        }
-        // Else server did something wrong, there was not any shoot
+        // Something here
     }
 
     public void Shoot(Vector2Int shootPos)
@@ -110,7 +55,6 @@ public class ServerController : MonoBehaviour
 
 
 
-
     public bool IsMyTurn()
     {
         if (gameTurn == 0) return false;
@@ -119,10 +63,9 @@ public class ServerController : MonoBehaviour
 
 
 
-
-    private Ship[] GetShipPositions()
+    private int[,] GetShipPositions()
     {
-        Ship[] shipPositions = new Ship[10];
+        int[,] shipPositions = new int[10,4];
         int i = 0;
         foreach (GameObject iship in shipManager.ships)
         {
@@ -131,48 +74,64 @@ public class ServerController : MonoBehaviour
             switch (shipCur.size)
             {
                 case 1:
-                    shipPositions[i].start = mainPartPos;
-                    shipPositions[i].end = mainPartPos;
+                    shipPositions[i,0] = mainPartPos.x;
+                    shipPositions[i,1] = mainPartPos.y;
+                    shipPositions[i,2] = mainPartPos.x;
+                    shipPositions[i,3] = mainPartPos.y;
                     break;
                 case 2:
                     if (shipCur.horizontally)
                     {
-                        shipPositions[i].start = mainPartPos;
-                        shipPositions[i].end = new Vector2Int(mainPartPos.x + 1, mainPartPos.y);
+                        shipPositions[i,0] = mainPartPos.x;
+                        shipPositions[i,1] = mainPartPos.y;
+                        shipPositions[i,2] = mainPartPos.x + 1;
+                        shipPositions[i,3] = mainPartPos.y;
                     }
                     else
                     {
-                        shipPositions[i].start = mainPartPos;
-                        shipPositions[i].end = new Vector2Int(mainPartPos.x, mainPartPos.y + 1);
+                        shipPositions[i,0] = mainPartPos.x;
+                        shipPositions[i,1] = mainPartPos.y;
+                        shipPositions[i,2] = mainPartPos.x;
+                        shipPositions[i,3] = mainPartPos.y + 1;
                     }
                     break;
                 case 3:
                     if (shipCur.horizontally)
                     {
-                        shipPositions[i].start = new Vector2Int(mainPartPos.x - 1, mainPartPos.y);
-                        shipPositions[i].end = new Vector2Int(mainPartPos.x + 1, mainPartPos.y);
+                        shipPositions[i,0] = mainPartPos.x - 1;
+                        shipPositions[i,1] = mainPartPos.y;
+                        shipPositions[i,2] = mainPartPos.x + 1;
+                        shipPositions[i,3] = mainPartPos.y;
                     }
                     else
                     {
-                        shipPositions[i].start = new Vector2Int(mainPartPos.x, mainPartPos.y - 1);
-                        shipPositions[i].end = new Vector2Int(mainPartPos.x, mainPartPos.y + 1);
+                        shipPositions[i,0] = mainPartPos.x;
+                        shipPositions[i,1] = mainPartPos.y - 1;
+                        shipPositions[i,2] = mainPartPos.x;
+                        shipPositions[i,3] = mainPartPos.y + 1;
                     }
                     break;
                 case 4:
                     if (shipCur.horizontally)
                     {
-                        shipPositions[i].start = new Vector2Int(mainPartPos.x - 1, mainPartPos.y);
-                        shipPositions[i].end = new Vector2Int(mainPartPos.x + 2, mainPartPos.y);
+                        shipPositions[i,0] = mainPartPos.x - 1;
+                        shipPositions[i,1] = mainPartPos.y;
+                        shipPositions[i,2] = mainPartPos.x + 2;
+                        shipPositions[i,3] = mainPartPos.y;
                     }
                     else
                     {
-                        shipPositions[i].start = new Vector2Int(mainPartPos.x, mainPartPos.y - 1);
-                        shipPositions[i].end = new Vector2Int(mainPartPos.x, mainPartPos.y + 2);
+                        shipPositions[i,0] = mainPartPos.x;
+                        shipPositions[i,1] = mainPartPos.y - 1;
+                        shipPositions[i,2] = mainPartPos.x;
+                        shipPositions[i,3] = mainPartPos.y + 2;
                     }
                     break;
                 default:
-                    shipPositions[i].start = Vector2Int.zero;
-                    shipPositions[i].end = Vector2Int.zero;
+                    shipPositions[i,0] = -1;
+                    shipPositions[i,1] = -1;
+                    shipPositions[i,2] = -1;
+                    shipPositions[i,3] = -1;
                     break;
             }
             i++;
