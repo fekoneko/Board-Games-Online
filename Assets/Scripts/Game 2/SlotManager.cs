@@ -43,13 +43,36 @@ public class SlotManager : MonoBehaviour
         Array.Copy(cells9, cells[9], 10);
     }
 
+
+    // For DragDrop
+
     public void SetAvailableShow(bool en)
     {
         foreach (GameObject[] j in cells)
         {
             foreach (GameObject i in j)
             {
-                i.GetComponent<ShipSlot>().SetAvailableShow(en);
+                if (i.GetComponent<ShipSlot>() != null)
+                {
+                    i.GetComponent<ShipSlot>().SetAvailableShow(en);
+                }
+            }
+        }
+    }
+
+
+    // For OpponentCell
+
+    public void SetButtonState(bool en)
+    {
+        foreach (GameObject[] j in cells)
+        {
+            foreach (GameObject i in j)
+            {
+                if (i.GetComponent<OpponentCells>() != null)
+                {
+                    i.GetComponent<UnityEngine.UI.Button>().interactable = en;
+                }
             }
         }
     }

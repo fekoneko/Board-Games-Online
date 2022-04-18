@@ -7,6 +7,7 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
 {
     [SerializeField] private Canvas canvas;
     [SerializeField] private GameObject shipManagerObject;
+    [SerializeField] private GameObject readyButtonObject;
     [SerializeField] private GameObject[] shipPartList;
     [SerializeField] public int size;
     [SerializeField] public bool horizontally;
@@ -18,6 +19,7 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
     private bool disabled = false;
     private bool pinned = false;
     private bool dragged = false;
+    private bool moving = false;
     private Vector2 basePosition;
     private Vector2 pinPosition;
     private ShipSlot pinShipSlot;
@@ -109,6 +111,17 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
         foreach (GameObject i in shipPartList)
         {
             i.GetComponent<ShipPartManager>().ShowEquipment();
+        }
+
+        // Make ReadyButton active (if needed)
+        ReadyButton readyButton = readyButtonObject.GetComponent<ReadyButton>();
+        if (readyButton.checkShips())
+        {
+            readyButton.GetComponent<UnityEngine.UI.Button>().interactable = true;
+        }
+        else
+        {
+            readyButton.GetComponent<UnityEngine.UI.Button>().interactable = false;
         }
     }
 
@@ -418,6 +431,8 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
 
     public bool CheckPinned() { return pinned; }
 
+    public bool isMoving() { return moving; }
+
     public void Update()
     {
         if (!disabled)
@@ -436,6 +451,7 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
                     if (rectTransform.anchoredPosition != basePosition)
                     {
                         rectTransform.position = Vector2.MoveTowards(rectTransform.position, basePosition, 10000 * Time.deltaTime);
+                        moving = true;
                     }
                 }
             }

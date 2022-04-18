@@ -41,6 +41,7 @@ public class ReadyButton : MonoBehaviour
     {
         button = this.GetComponent<Button>();
         button.onClick.AddListener(TaskOnClick);
+        button.interactable = false;
 
         text = textObject.GetComponent<Text>();
         shipManager = shipManagerObject.GetComponent<ShipManager>();
@@ -107,7 +108,7 @@ public class ReadyButton : MonoBehaviour
 
                 textStep++;
                 textStep %= 3;
-                waitingTimePr = waitingTime;
+                waitingTimePr += 1.0f;
             }
             if (waitingTime > 5.0f)
             {
@@ -167,7 +168,7 @@ public class ReadyButton : MonoBehaviour
         }
     }
 
-    private bool checkShips()
+    public bool checkShips()
     {
         bool allArePinned = true;
         foreach(GameObject i in shipManager.ships)

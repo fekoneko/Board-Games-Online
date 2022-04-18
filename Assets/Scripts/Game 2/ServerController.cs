@@ -5,9 +5,11 @@ using UnityEngine;
 public class ServerController : MonoBehaviour
 {
     [SerializeField] GameObject shipManagerObject;
+    [SerializeField] GameObject opponentSlotManagerObject;
     [SerializeField] GameObject readyButtonObject;
 
     private ShipManager shipManager;
+    private SlotManager opponentSlotManager;
     private ReadyButton readyButton;
 
     private int gameTurn = 0;
@@ -17,6 +19,7 @@ public class ServerController : MonoBehaviour
     void Start()
     {
         shipManager = shipManagerObject.GetComponent<ShipManager>();
+        opponentSlotManager = opponentSlotManagerObject.GetComponent<SlotManager>();
         readyButton = readyButtonObject.GetComponent<ReadyButton>();
     }
 
@@ -41,11 +44,10 @@ public class ServerController : MonoBehaviour
         // Something here
     }
 
-    public void NextTurn(int turn)
+    public void ChangeTurn(int turn)
     {
-        // Something here
-
         gameTurn = turn;
+        opponentSlotManager.SetButtonState(IsMyTurn());
     }
 
     public void GameEnd(int win)
