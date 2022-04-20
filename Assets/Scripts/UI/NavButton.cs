@@ -28,12 +28,12 @@ public class NavButton : MonoBehaviour
 
         if (breakConnection)
         {
-            BreakConnection();
+            GameObject[] MainServerController = GameObject.FindGameObjectsWithTag("mainServerController");
+            foreach (GameObject i in MainServerController)
+            {
+                //i.SetActive(false);
+                Destroy(i);
+            }
         }
-    }
-
-    private void BreakConnection()
-    {
-        // Something Here
     }
 }

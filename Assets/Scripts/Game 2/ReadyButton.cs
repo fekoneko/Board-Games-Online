@@ -146,7 +146,14 @@ public class ReadyButton : MonoBehaviour
                     Destroy(waitingBannerImageObject);
                     Destroy(waitingBannerTextObject);
                 }
-                Destroy(this.gameObject);
+                foreach (GameObject i in shipManager.ships)
+                {
+                    ShipDragDrop shipDragDrop = i.GetComponent<ShipDragDrop>();
+                    Vector2 newPinPosition = new Vector2(shipDragDrop.pinPosition.x, shipDragDrop.pinPosition.y + 53.4f);
+                    shipDragDrop.pinPosition = newPinPosition;
+                    i.GetComponent<RectTransform>().position = newPinPosition;
+                }
+                Destroy(gameObject);
             }
         }
     }
@@ -158,7 +165,7 @@ public class ReadyButton : MonoBehaviour
             shipManager.SetShipDragging(false);
             slotManager.SetAvailableShow(false);
 
-            //serverController.ServerSendReady();
+            serverController.ServerSend_Ready();
 
             Destroy(rotateButtonObject);
             Destroy(randomButtonObject);

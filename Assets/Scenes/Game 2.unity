@@ -1010,7 +1010,7 @@ RectTransform:
   m_Children:
   - {fileID: 572019302}
   m_Father: {fileID: 1748260998}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1029,7 +1029,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6a4a68a33d61a44a68fc3ec26f904d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: Main Menu
+  sceneName: Main Menu
+  breakConnection: 1
 --- !u!114 &51858057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11454,7 +11455,6 @@ MonoBehaviour:
   randomButtonObject: {fileID: 55118946}
   slotsObject: {fileID: 1704128328}
   opponentSlotsObject: {fileID: 1307698513}
-  thisObject: {fileID: 779728568}
   waitingBannerImageList:
   - {fileID: 21300000, guid: c0aa9214be926b847ab0ffb767a9db56, type: 3}
   waitingBannerTextList:
@@ -12175,7 +12175,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1748260998}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -20655,7 +20655,7 @@ RectTransform:
   - {fileID: 1254572117}
   - {fileID: 16161722}
   m_Father: {fileID: 1748260998}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -26412,9 +26412,9 @@ RectTransform:
   - {fileID: 1016549126}
   - {fileID: 1704128329}
   - {fileID: 747393462}
+  - {fileID: 1307698514}
   - {fileID: 51858055}
   - {fileID: 814620851}
-  - {fileID: 1307698514}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

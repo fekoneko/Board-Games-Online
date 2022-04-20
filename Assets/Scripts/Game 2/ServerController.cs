@@ -4,68 +4,93 @@ using UnityEngine;
 
 public class ServerController : MonoBehaviour
 {
-    [SerializeField] GameObject shipManagerObject;
-    [SerializeField] GameObject opponentSlotManagerObject;
-    [SerializeField] GameObject readyButtonObject;
+    [SerializeField] private GameObject shipManagerObject;
+    [SerializeField] private GameObject opponentSlotManagerObject;
+    [SerializeField] private GameObject readyButtonObject;
 
     private ShipManager shipManager;
     private SlotManager opponentSlotManager;
     private ReadyButton readyButton;
+    private MainServerController2 mainServerController;
 
-    private int gameTurn = 0;
+    private bool isMyTurn = false;
 
-
-
-    void Awake()
+    public void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
-    }
+        gameObject.tag = "serverController";
 
-    void Start()
-    {
         shipManager = shipManagerObject.GetComponent<ShipManager>();
         opponentSlotManager = opponentSlotManagerObject.GetComponent<SlotManager>();
         readyButton = readyButtonObject.GetComponent<ReadyButton>();
+
+        GameObject mainServerControllerObject = GameObject.FindGameObjectWithTag("mainServerController");
+        if (mainServerControllerObject != null)
+        {
+            mainServerController = mainServerControllerObject.GetComponent<MainServerController2>();
+        }
+        else
+        {
+            mainServerController = null;
+        }
     }
 
-    void Update()
+    public void Update()
     {
         
     }
 
 
-    public void GameStart()
+    public void ServerHandle_StartBattle()
     {
         readyButton.startGame();
     }
 
-    public void ShootCallback(int callback)
+    public void ServerHandle_ShootCallback(string callback)
+    {
+        // Something here
+        ChangeTurn(false);
+    }
+
+    public void ServerHandle_Shoot(int shootX, int shootY, string callback)
+    {
+        // Something here
+        ChangeTurn(true);
+    }
+
+    public void ServerHandle_EndBattle(bool win)
     {
         // Something here
     }
 
-    public void Shoot(Vector2Int shootPos)
+
+    public void ServerSend_Ready()
     {
-        // Something here
+        if (mainServerController != null)
+        {
+            int[,] shipPos = GetShipPositions();
+            mainServerController.SendReady(shipPos);
+        }
     }
 
-    public void ChangeTurn(int turn)
+    public void ServerSend_Shoot(int shootX, int shootY)
     {
-        gameTurn = turn;
-        opponentSlotManager.SetButtonState(IsMyTurn());
-    }
-
-    public void GameEnd(int win)
-    {
-        // Something here
+        if (mainServerController != null)
+        {
+            mainServerController.SendShoot(shootX, shootY);
+        }
     }
 
 
 
     public bool IsMyTurn()
     {
-        if (gameTurn == 0) return false;
-        else return true;
+        return isMyTurn;
+    }
+
+    public void ChangeTurn(bool turn)
+    {
+        isMyTurn = turn;
+        opponentSlotManager.SetButtonState(isMyTurn);
     }
 
 

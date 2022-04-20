@@ -20,8 +20,8 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
     private bool pinned = false;
     private bool dragged = false;
     private bool moving = false;
-    private Vector2 basePosition;
-    private Vector2 pinPosition;
+    public Vector2 basePosition;
+    public Vector2 pinPosition;
     private ShipSlot pinShipSlot;
     public float rotationAngle = 0;
     public float rotationAngleCur = 0;
