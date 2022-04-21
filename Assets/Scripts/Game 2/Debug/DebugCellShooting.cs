@@ -15,17 +15,17 @@ public class DebugCellShooting : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            GetComponent<OpponentCells>().MakeDamaged();
+            GetComponent<OpponentCell>().MakeDamaged();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            GetComponent<OpponentCells>().MakeMissed();
+            GetComponent<OpponentCell>().MakeMissed();
         }
          
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            GetComponent<OpponentCells>().MakePainted();
+            GetComponent<OpponentCell>().MakePainted();
         }
     }
 }

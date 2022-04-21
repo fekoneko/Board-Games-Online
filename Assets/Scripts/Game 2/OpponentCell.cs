@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class OpponentCells : MonoBehaviour
+public class OpponentCell : MonoBehaviour
 {
     [SerializeField] public Vector2 cell;
     [SerializeField] private GameObject slotManagerObject;
@@ -12,6 +12,7 @@ public class OpponentCells : MonoBehaviour
     [SerializeField] private Sprite damagedCellSprite;
     [SerializeField] private Sprite paintedCellSprite;
     [SerializeField] private Sprite[] shootSpriteList;
+    [SerializeField] private GameObject serverControllerObject;
 
     public GameObject[][] cells;
 
@@ -22,6 +23,9 @@ public class OpponentCells : MonoBehaviour
     private Image cellImage;
     private GameObject shootObject;
     private Image shootImage;
+
+    private SlotManager slotManager;
+    private ServerController serverController;
 
     private float shootImageTime = -1.0f;
     private float shootImageTimePr = -0.1f;
@@ -42,6 +46,8 @@ public class OpponentCells : MonoBehaviour
     public void Start()
     {
         cells = slotManagerObject.GetComponent<SlotManager>().cells;
+        slotManager = slotManagerObject.GetComponent<SlotManager>();
+        serverController = serverControllerObject.GetComponent<ServerController>();
 
         shootObject = new GameObject();
         shootImage = shootObject.AddComponent<Image>();
@@ -62,6 +68,8 @@ public class OpponentCells : MonoBehaviour
         cellObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         cellImage.rectTransform.sizeDelta = new Vector2(90, 90);
         cellObject.SetActive(true);
+
+        button.interactable = true;
     }
 
     public void Update()
@@ -117,6 +125,9 @@ public class OpponentCells : MonoBehaviour
     private void TaskOnClick()
     {
         // Shoot
+        serverController.ServerSend_Shoot((int)cell.x, (int)cell.y);
+        slotManager.lastShootX = (int)cell.y; // Swapped
+        slotManager.lastShootY = (int)cell.x;
 
         shootImageTime = 0.0f; // Animate
         shootImageTimePr = -0.1f;

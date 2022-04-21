@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ServerController : MonoBehaviour
 {
@@ -47,7 +48,23 @@ public class ServerController : MonoBehaviour
 
     public void ServerHandle_ShootCallback(string callback)
     {
-        // Something here
+        if (opponentSlotManager.lastShootX > -1 && opponentSlotManager.lastShootY > -1 &&
+            opponentSlotManager.lastShootX < 10 && opponentSlotManager.lastShootY < 10)
+        {
+            switch (callback)
+            {
+                case "missed":
+                    opponentSlotManager.cells[opponentSlotManager.lastShootX][opponentSlotManager.lastShootY].GetComponent<OpponentCell>().MakeMissed();
+                    break;
+                case "damaged":
+                    opponentSlotManager.cells[opponentSlotManager.lastShootX][opponentSlotManager.lastShootY].GetComponent<OpponentCell>().MakeDamaged();
+                    break;
+                case "killed":
+                    opponentSlotManager.cells[opponentSlotManager.lastShootX][opponentSlotManager.lastShootY].GetComponent<OpponentCell>().MakeDamaged();
+                    // Something here
+                    break;
+            }
+        }
         ChangeTurn(false);
     }
 
@@ -60,6 +77,8 @@ public class ServerController : MonoBehaviour
     public void ServerHandle_EndBattle(bool win)
     {
         // Something here
+        SceneManager.LoadScene("Main Menu"); // For test
+        Destroy(mainServerController);
     }
 
 

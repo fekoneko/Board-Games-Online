@@ -18,6 +18,9 @@ public class SlotManager : MonoBehaviour
 
     public GameObject[][] cells;
 
+    public int lastShootX = -1; // For opponent cells
+    public int lastShootY = -1;
+
     private void Awake()
     {
         cells = new GameObject[][] { null, null, null, null, null, null, null, null, null, null };
@@ -69,7 +72,7 @@ public class SlotManager : MonoBehaviour
         {
             foreach (GameObject i in j)
             {
-                if (i.GetComponent<OpponentCells>() != null)
+                if (i.GetComponent<OpponentCell>() != null)
                 {
                     i.GetComponent<UnityEngine.UI.Button>().interactable = en;
                 }

@@ -27,7 +27,7 @@ public class ReadyButton : MonoBehaviour
     private int textStep = 0;
     private bool waitingBannerShowed = false;
     private bool waitingBannerStopped = false;
-    private bool gameStarted = false;
+    private bool fightStarted = false;
 
     private GameObject waitingBannerImageObject;
     private RectTransform waitingBannerImageRectTransform;
@@ -87,7 +87,7 @@ public class ReadyButton : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if (waiting && !gameStarted)
+        if (waiting && !fightStarted)
         {
             if (waitingTime - waitingTimePr > 1.0f)
             {
@@ -125,7 +125,7 @@ public class ReadyButton : MonoBehaviour
             waitingBannerTextRectTransform.anchoredPosition = new Vector2(nx, waitingBannerTextRectTransform.anchoredPosition.y);
             if (nx == 0) waitingBannerStopped = true;
         }
-        if (gameStarted)
+        if (fightStarted)
         {
             //float ny = Vector2.MoveTowards(new Vector2(1000, transform.localPosition.y), new Vector2(0, 100), 2000 * Time.deltaTime).y; // Ease
             //transform.localPosition = new Vector2(transform.localPosition.x, ny);
@@ -138,6 +138,12 @@ public class ReadyButton : MonoBehaviour
             shipManagerRectTransform.anchoredPosition = Vector2.MoveTowards(shipManagerRectTransform.anchoredPosition, new Vector2(shipManagerRectTransform.anchoredPosition.x, -290), 500 * Time.deltaTime);
             RectTransform opponentSlotsRectTransform = opponentSlotsObject.GetComponent<RectTransform>();
             opponentSlotsRectTransform.anchoredPosition = Vector2.MoveTowards(opponentSlotsRectTransform.anchoredPosition, new Vector2(opponentSlotsRectTransform.anchoredPosition.x, -430), 2000 * Time.deltaTime);
+            
+            foreach (GameObject i in shipManager.ships)
+            {
+                ShipDragDrop shipDragDrop = i.GetComponent<ShipDragDrop>();
+                shipDragDrop.canMove = false;
+            }
 
             if (opponentSlotsRectTransform.anchoredPosition.y == -430) // Last action
             {
@@ -149,9 +155,9 @@ public class ReadyButton : MonoBehaviour
                 foreach (GameObject i in shipManager.ships)
                 {
                     ShipDragDrop shipDragDrop = i.GetComponent<ShipDragDrop>();
-                    Vector2 newPinPosition = new Vector2(shipDragDrop.pinPosition.x, shipDragDrop.pinPosition.y + 53.4f);
-                    shipDragDrop.pinPosition = newPinPosition;
-                    i.GetComponent<RectTransform>().position = newPinPosition;
+                    shipDragDrop.pinPosition = shipDragDrop.pinShipSlot.transform.position;
+                    shipDragDrop.basePosition = shipDragDrop.pinShipSlot.transform.position;
+                    shipDragDrop.canMove = true;
                 }
                 Destroy(gameObject);
             }
@@ -197,6 +203,6 @@ public class ReadyButton : MonoBehaviour
 
     public void startGame()
     {
-        gameStarted = true; // Moving up is in Update()
+        fightStarted = true; // Moving up is in Update()
     }
 }

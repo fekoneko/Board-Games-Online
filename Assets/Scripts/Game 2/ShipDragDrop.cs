@@ -22,9 +22,10 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
     private bool moving = false;
     public Vector2 basePosition;
     public Vector2 pinPosition;
-    private ShipSlot pinShipSlot;
+    public ShipSlot pinShipSlot;
     public float rotationAngle = 0;
     public float rotationAngleCur = 0;
+    public bool canMove = true;
 
     private void Awake()
     {
@@ -435,7 +436,7 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
 
     public void Update()
     {
-        if (!disabled)
+        if (canMove)
         {
             if (!dragged)
             {
@@ -455,39 +456,39 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
                     }
                 }
             }
+        }
 
-            if (rotationAngleCur != rotationAngle)
+        if (rotationAngleCur != rotationAngle)
+        {
+            float step;
+            if (!dragged || Mathf.Abs(rotationAngle - rotationAngleCur) > 20)
+                step = 500f * Time.deltaTime;
+            else
+                step = 65f * Time.deltaTime;
+            if (rotationAngle - rotationAngleCur > step)
             {
-                float step;
-                if (!dragged || Mathf.Abs(rotationAngle - rotationAngleCur) > 20)
-                    step = 500f * Time.deltaTime;
-                else
-                    step = 65f * Time.deltaTime;
-                if (rotationAngle - rotationAngleCur > step)
-                {
-                    rotationAngleCur += step;
-                }
-                else if (rotationAngleCur - rotationAngle > step)
-                {
-                    rotationAngleCur -= step;
-                }
-                else
-                {
-                    rotationAngleCur = rotationAngle;
-                }
-                rectTransform.rotation = Quaternion.AngleAxis(rotationAngleCur, Vector3.back);
-
-                if (horizontally)
-                    rotationAngle = 0.0f;
-                else
-                    rotationAngle = 90.0f;
+                rotationAngleCur += step;
             }
-
-            if (!dragged && !pinned)
+            else if (rotationAngleCur - rotationAngle > step)
             {
-                horizontally = true;
+                rotationAngleCur -= step;
+            }
+            else
+            {
+                rotationAngleCur = rotationAngle;
+            }
+            rectTransform.rotation = Quaternion.AngleAxis(rotationAngleCur, Vector3.back);
+
+            if (horizontally)
                 rotationAngle = 0.0f;
-            }
+            else
+                rotationAngle = 90.0f;
+        }
+
+        if (!dragged && !pinned)
+        {
+            horizontally = true;
+            rotationAngle = 0.0f;
         }
     }
 }

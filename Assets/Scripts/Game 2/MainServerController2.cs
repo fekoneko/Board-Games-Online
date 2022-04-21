@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Microsoft.AspNetCore.SignalR.Client;
+using System;
 
 public class MainServerController2 : MonoBehaviour
 {
@@ -11,25 +12,29 @@ public class MainServerController2 : MonoBehaviour
     private HubConnection hubConnection;
 
     private bool gameStartIsMyTurn = false;
+    private bool gameStarted = false;
 
     public void OnEnable()
     {
-        // Read server url
-        string path = Application.persistentDataPath + "/" + serverUrlFileName;
-        if (System.IO.File.Exists(path))
+        if (!gameStarted) // Just in case
         {
-            serverUrl = System.IO.File.ReadAllText(path);
-        }
-        else
-        {
-            //System.IO.File.CreateText(path);
-            System.IO.File.WriteAllText(path, "http://localhost:5000/shipbattle");
-            serverUrl = "http://localhost:5000/shipbattle";
-        }
+            // Read server url
+            string path = Application.persistentDataPath + "/" + serverUrlFileName;
+            if (System.IO.File.Exists(path))
+            {
+                serverUrl = System.IO.File.ReadAllText(path);
+            }
+            else
+            {
+                //System.IO.File.CreateText(path);
+                serverUrl = "http://localhost:5000/shipbattle";
+                System.IO.File.WriteAllText(path, serverUrl);
+            }
 
-        if (ConnectToServer())
-        {
-            hubConnection.Closed += HubConnection_Closed;
+            if (ConnectToServer())
+            {
+                hubConnection.Closed += HubConnection_Closed;
+            }
         }
     }
 
@@ -48,6 +53,10 @@ public class MainServerController2 : MonoBehaviour
     {
         hubConnection.StopAsync();
         hubConnection.DisposeAsync();
+        if (gameStarted)
+        {
+            DisconnectFromServer(); // Go to menu and destroy this
+        }
     }
 
     public void Update()
@@ -90,12 +99,19 @@ public class MainServerController2 : MonoBehaviour
                     }
                     else
                     {
-                        isMyTurn = false;
+                        DisconnectFromServer();
+                        break;
                     }
                     StartGame(isMyTurn);
+                    gameStarted = true;
                     break;
 
+                /*
                 case "success":
+                    break;
+                */
+
+                case "fight":
                     serverControllerObject = GameObject.FindGameObjectWithTag("serverController");
                     if (serverControllerObject != null)
                     {
@@ -128,8 +144,7 @@ public class MainServerController2 : MonoBehaviour
                         }
                         else
                         {
-                            shootX = -1;
-                            shootY = -1;
+                            break;
                         }
                         if (serverControllerObject != null)
                         {
@@ -162,8 +177,7 @@ public class MainServerController2 : MonoBehaviour
                         }
                         else
                         {
-                            shootX = -1;
-                            shootY = -1;
+                            break;
                         }
                         if (serverControllerObject != null)
                         {
@@ -196,8 +210,7 @@ public class MainServerController2 : MonoBehaviour
                         }
                         else
                         {
-                            shootX = -1;
-                            shootY = -1;
+                            break;
                         }
                         if (serverControllerObject != null)
                         {
@@ -228,6 +241,11 @@ public class MainServerController2 : MonoBehaviour
         }
     }
 
+    private void DisconnectFromServer()
+    {
+        SceneManager.LoadScene("Main menu");
+        Destroy(gameObject);
+    }
 
     private bool ConnectToServer()
     {
