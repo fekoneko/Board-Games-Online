@@ -67,7 +67,7 @@ public class ServerController : MonoBehaviour
     {
         if (mainServerController != null)
         {
-            int[,] shipPos = GetShipPositions();
+            int[][] shipPos = GetShipPositions();
             mainServerController.SendReady(shipPos);
         }
     }
@@ -95,9 +95,19 @@ public class ServerController : MonoBehaviour
 
 
 
-    private int[,] GetShipPositions()
+    private int[][] GetShipPositions()
     {
-        int[,] shipPositions = new int[10,4];
+        int[][] shipPositions = new int[10][];
+        shipPositions[0] = new int[4];
+        shipPositions[1] = new int[4];
+        shipPositions[2] = new int[4];
+        shipPositions[3] = new int[4];
+        shipPositions[4] = new int[4];
+        shipPositions[5] = new int[4];
+        shipPositions[6] = new int[4];
+        shipPositions[7] = new int[4];
+        shipPositions[8] = new int[4];
+        shipPositions[9] = new int[4];
         int i = 0;
         foreach (GameObject iship in shipManager.ships)
         {
@@ -106,64 +116,64 @@ public class ServerController : MonoBehaviour
             switch (shipCur.size)
             {
                 case 1:
-                    shipPositions[i,0] = mainPartPos.x;
-                    shipPositions[i,1] = mainPartPos.y;
-                    shipPositions[i,2] = mainPartPos.x;
-                    shipPositions[i,3] = mainPartPos.y;
+                    shipPositions[i][0] = mainPartPos.x;
+                    shipPositions[i][1] = mainPartPos.y;
+                    shipPositions[i][2] = mainPartPos.x;
+                    shipPositions[i][3] = mainPartPos.y;
                     break;
                 case 2:
                     if (shipCur.horizontally)
                     {
-                        shipPositions[i,0] = mainPartPos.x;
-                        shipPositions[i,1] = mainPartPos.y;
-                        shipPositions[i,2] = mainPartPos.x + 1;
-                        shipPositions[i,3] = mainPartPos.y;
+                        shipPositions[i][0] = mainPartPos.x;
+                        shipPositions[i][1] = mainPartPos.y;
+                        shipPositions[i][2] = mainPartPos.x + 1;
+                        shipPositions[i][3] = mainPartPos.y;
                     }
                     else
                     {
-                        shipPositions[i,0] = mainPartPos.x;
-                        shipPositions[i,1] = mainPartPos.y;
-                        shipPositions[i,2] = mainPartPos.x;
-                        shipPositions[i,3] = mainPartPos.y + 1;
+                        shipPositions[i][0] = mainPartPos.x;
+                        shipPositions[i][1] = mainPartPos.y;
+                        shipPositions[i][2] = mainPartPos.x;
+                        shipPositions[i][3] = mainPartPos.y + 1;
                     }
                     break;
                 case 3:
                     if (shipCur.horizontally)
                     {
-                        shipPositions[i,0] = mainPartPos.x - 1;
-                        shipPositions[i,1] = mainPartPos.y;
-                        shipPositions[i,2] = mainPartPos.x + 1;
-                        shipPositions[i,3] = mainPartPos.y;
+                        shipPositions[i][0] = mainPartPos.x - 1;
+                        shipPositions[i][1] = mainPartPos.y;
+                        shipPositions[i][2] = mainPartPos.x + 1;
+                        shipPositions[i][3] = mainPartPos.y;
                     }
                     else
                     {
-                        shipPositions[i,0] = mainPartPos.x;
-                        shipPositions[i,1] = mainPartPos.y - 1;
-                        shipPositions[i,2] = mainPartPos.x;
-                        shipPositions[i,3] = mainPartPos.y + 1;
+                        shipPositions[i][0] = mainPartPos.x;
+                        shipPositions[i][1] = mainPartPos.y - 1;
+                        shipPositions[i][2] = mainPartPos.x;
+                        shipPositions[i][3] = mainPartPos.y + 1;
                     }
                     break;
                 case 4:
                     if (shipCur.horizontally)
                     {
-                        shipPositions[i,0] = mainPartPos.x - 1;
-                        shipPositions[i,1] = mainPartPos.y;
-                        shipPositions[i,2] = mainPartPos.x + 2;
-                        shipPositions[i,3] = mainPartPos.y;
+                        shipPositions[i][0] = mainPartPos.x - 1;
+                        shipPositions[i][1] = mainPartPos.y;
+                        shipPositions[i][2] = mainPartPos.x + 2;
+                        shipPositions[i][3] = mainPartPos.y;
                     }
                     else
                     {
-                        shipPositions[i,0] = mainPartPos.x;
-                        shipPositions[i,1] = mainPartPos.y - 1;
-                        shipPositions[i,2] = mainPartPos.x;
-                        shipPositions[i,3] = mainPartPos.y + 2;
+                        shipPositions[i][0] = mainPartPos.x;
+                        shipPositions[i][1] = mainPartPos.y - 1;
+                        shipPositions[i][2] = mainPartPos.x;
+                        shipPositions[i][3] = mainPartPos.y + 2;
                     }
                     break;
                 default:
-                    shipPositions[i,0] = -1;
-                    shipPositions[i,1] = -1;
-                    shipPositions[i,2] = -1;
-                    shipPositions[i,3] = -1;
+                    shipPositions[i][0] = -1;
+                    shipPositions[i][1] = -1;
+                    shipPositions[i][2] = -1;
+                    shipPositions[i][3] = -1;
                     break;
             }
             i++;

@@ -259,14 +259,18 @@ public class MainServerController2 : MonoBehaviour
     }
 
 
-    public void SendReady(int[,] shipPos)
+    public void SendReady(int[][] shipPos)
     {
-        hubConnection.InvokeAsync<System.Threading.Tasks.Task>("SetShips", shipPos);
+        hubConnection.InvokeAsync("SetShips", shipPos);
+        //hubConnection.InvokeAsync<System.Threading.Tasks.Task>("SetShips", shipPos);
+        //hubConnection.InvokeCoreAsync<System.Threading.Tasks.Task>("SetShips", new object[] { shipPos });
     }
 
     public void SendShoot(int shootX, int shootY)
     {
-        hubConnection.InvokeAsync<System.Threading.Tasks.Task>("Shoot", shootX, shootY);
+        hubConnection.InvokeAsync("Shoot", shootX, shootY);
+        //hubConnection.InvokeAsync<System.Threading.Tasks.Task>("Shoot", shootX, shootY);
+        //hubConnection.InvokeCoreAsync<System.Threading.Tasks.Task>("Shoot", new object[] { shootX, shootY });
     }
 
     public void ServerHandle_Error(int errorCode)
