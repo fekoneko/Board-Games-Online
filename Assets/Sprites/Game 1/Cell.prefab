@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16bf779a58f1878428c6dbc076284e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _teamAColor: {r: 1, g: 0.5226415, b: 0.5226415, a: 1}
-  _teamBColor: {r: 0.35799843, g: 0.8301887, b: 0.2145959, a: 1}
+  _teamAColor: {fileID: 21300000, guid: 71aa8c444b5ca0e42bde1ccd5c86ed47, type: 3}
+  _teamBColor: {fileID: 21300000, guid: 9df3c6305a7c1d341b68a5b02d0fee09, type: 3}
   _cellBackground: {fileID: 8612190825390859510}
 --- !u!114 &892718558904221164
 MonoBehaviour:

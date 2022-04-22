@@ -19,11 +19,11 @@ public class Cell : MonoBehaviour
         onCellPressed?.Invoke(this);
     }
 
-    [SerializeField] private Color _teamAColor;
-    [SerializeField] private Color _teamBColor;
+    [SerializeField] private Sprite _teamAColor;
+    [SerializeField] private Sprite _teamBColor;
     [SerializeField] private Image _cellBackground;
     private void UpdateBackgroundColor()
     {
-        _cellBackground.color = playerId == 0 ? _teamAColor : _teamBColor;
+        _cellBackground.sprite = playerId == 0 ? _teamAColor : _teamBColor;
     }
 }
