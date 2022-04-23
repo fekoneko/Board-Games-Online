@@ -55,6 +55,7 @@ public class ServerController : MonoBehaviour
             {
                 case "missed":
                     opponentSlotManager.cells[opponentSlotManager.lastShootX][opponentSlotManager.lastShootY].GetComponent<OpponentCell>().MakeMissed();
+                    ChangeTurn(false);
                     break;
                 case "damaged":
                     opponentSlotManager.cells[opponentSlotManager.lastShootX][opponentSlotManager.lastShootY].GetComponent<OpponentCell>().MakeDamaged();
@@ -65,20 +66,19 @@ public class ServerController : MonoBehaviour
                     break;
             }
         }
-        ChangeTurn(false);
+        else
+        {
+            ChangeTurn(false);
+        }
     }
 
     public void ServerHandle_Shoot(int shootX, int shootY, string callback)
     {
         // Something here
-        ChangeTurn(true);
-    }
-
-    public void ServerHandle_EndBattle(bool win)
-    {
-        // Something here
-        SceneManager.LoadScene("Main Menu"); // For test
-        Destroy(mainServerController);
+        if (callback == "missed")
+        {
+            ChangeTurn(true);
+        }
     }
 
 

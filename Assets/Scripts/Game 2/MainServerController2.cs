@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Microsoft.AspNetCore.SignalR.Client;
-using System;
 
 public class MainServerController2 : MonoBehaviour
 {
@@ -13,6 +12,12 @@ public class MainServerController2 : MonoBehaviour
 
     private bool gameStartIsMyTurn = false;
     private bool gameStarted = false;
+    private bool disconnect = false;
+    private bool gameEnded = false;
+    private bool fightStarted = false;
+    private float gameEndTime = 0.0f;
+
+    public bool gameResult = false;
 
     public void OnEnable()
     {
@@ -46,25 +51,31 @@ public class MainServerController2 : MonoBehaviour
 
     private System.Threading.Tasks.Task HubConnection_Closed(System.Exception arg)
     {
-        throw new System.NotImplementedException("Connection closed");
+        disconnect = true;
+        throw new System.NotImplementedException();
     }
 
     public void OnDisable()
     {
-        hubConnection.StopAsync();
-        hubConnection.DisposeAsync();
-        if (gameStarted)
+        if (hubConnection != null)
         {
-            DisconnectFromServer(); // Go to menu and destroy this
+            hubConnection.StopAsync();
+            hubConnection.DisposeAsync();
         }
     }
 
     public void Update()
     {
-        //if (gameObject.scene.name == "DontDestroyOnLoad")
-        //{
-        //    SceneManager.MergeScenes(gameObject.scene, SceneManager.GetActiveScene());
-        //}
+        if (disconnect && !gameEnded) // Just a simple disconnect
+        {
+            SceneManager.LoadScene("Main Menu");
+            Destroy(gameObject);
+        }
+        if (gameEnded && Time.realtimeSinceStartup - gameEndTime > 1.5f)
+        {
+            SceneManager.LoadScene("Game End Screen");
+            // Delete gameObject later
+        }
     }
 
     private void HandleMessage(string message)
@@ -99,7 +110,7 @@ public class MainServerController2 : MonoBehaviour
                     }
                     else
                     {
-                        DisconnectFromServer();
+                        Destroy(gameObject);
                         break;
                     }
                     StartGame(isMyTurn);
@@ -118,6 +129,7 @@ public class MainServerController2 : MonoBehaviour
                         serverController = serverControllerObject.GetComponent<ServerController>();
                         serverController.ServerHandle_StartBattle();
                         serverController.ChangeTurn(gameStartIsMyTurn);
+                        fightStarted = true;
                     }
                     break;
 
@@ -221,30 +233,34 @@ public class MainServerController2 : MonoBehaviour
                     break;
 
                 case "win":
-                    serverControllerObject = GameObject.FindGameObjectWithTag("serverController");
-                    if (serverControllerObject != null)
+                    if (hubConnection.ConnectionId != null)
                     {
-                        serverController = serverControllerObject.GetComponent<ServerController>();
-                        serverController.ServerHandle_EndBattle(true);
+                        hubConnection.StopAsync();
+                        hubConnection.DisposeAsync();
+                        hubConnection = null;
+                    }
+                    if (fightStarted)
+                    {
+                        ServerHandle_EndBattle(true);
+                        gameEnded = true;
                     }
                     break;
 
                 case "lose":
-                    serverControllerObject = GameObject.FindGameObjectWithTag("serverController");
-                    if (serverControllerObject != null)
+                    if (hubConnection.ConnectionId != null)
                     {
-                        serverController = serverControllerObject.GetComponent<ServerController>();
-                        serverController.ServerHandle_EndBattle(false);
+                        hubConnection.StopAsync();
+                        hubConnection.DisposeAsync();
+                        hubConnection = null;
+                    }
+                    if (fightStarted)
+                    {
+                        ServerHandle_EndBattle(false);
+                        gameEnded = true;
                     }
                     break;
             }
         }
-    }
-
-    private void DisconnectFromServer()
-    {
-        SceneManager.LoadScene("Main menu");
-        Destroy(gameObject);
     }
 
     private bool ConnectToServer()
@@ -279,19 +295,25 @@ public class MainServerController2 : MonoBehaviour
 
     public void SendReady(int[][] shipPos)
     {
+        if (hubConnection == null) return;
+        if (hubConnection.ConnectionId == null) return;
         hubConnection.InvokeAsync("SetShips", shipPos);
-        //hubConnection.InvokeAsync<System.Threading.Tasks.Task>("SetShips", shipPos);
-        //hubConnection.InvokeCoreAsync<System.Threading.Tasks.Task>("SetShips", new object[] { shipPos });
     }
 
     public void SendShoot(int shootX, int shootY)
     {
+        if (hubConnection == null) return;
+        if (hubConnection.ConnectionId == null) return;
         hubConnection.InvokeAsync("Shoot", shootX, shootY);
-        //hubConnection.InvokeAsync<System.Threading.Tasks.Task>("Shoot", shootX, shootY);
-        //hubConnection.InvokeCoreAsync<System.Threading.Tasks.Task>("Shoot", new object[] { shootX, shootY });
     }
 
-    public void ServerHandle_Error(int errorCode)
+    private void ServerHandle_EndBattle(bool win)
+    {
+        gameResult = win;
+        gameEndTime = Time.realtimeSinceStartup;
+    }
+
+    private void ServerHandle_Error(int errorCode)
     {
         // Something here
     }
