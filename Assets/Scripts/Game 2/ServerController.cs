@@ -89,6 +89,7 @@ public class ServerController : MonoBehaviour
                 break;
             case "killed":
                 slotManager.cells[shootY][shootX].GetComponent<ShipSlot>().MakeDamaged();
+                DisplayMyKilledShip(shootY, shootX);
                 break;
         }
     }
@@ -354,6 +355,198 @@ public class ServerController : MonoBehaviour
 
                 opponentSlotManager.cells[shipParts[i][0]][shipParts[i][1]].GetComponent<OpponentCell>().SetShipSprite(spriteID, rotation + 90f);
 
+                // Paint around
+                /*
+                int[] s0 = shipParts[0];
+                int[] s1;
+                if (shipParts[1] != null) s1 = shipParts[1];
+                else s1 = new int[] { -1, -1 };
+                int[] s2;
+                if (shipParts[2] != null) s2 = shipParts[2];
+                else s2 = new int[] { -1, -1 };
+                int[] s3;
+                if (shipParts[3] != null) s3 = shipParts[3];
+                else s3 = new int[] { -1, -1 };
+
+                if ((s0[0] != shipParts[i][0] - 1 || s0[1] != shipParts[i][1] - 1) &&
+                    (s1[0] != shipParts[i][0] - 1 || s1[1] != shipParts[i][1] - 1) &&
+                    (s2[0] != shipParts[i][0] - 1 || s2[1] != shipParts[i][1] - 1) &&
+                    (s3[0] != shipParts[i][0] - 1 || s3[1] != shipParts[i][1] - 1))
+                    if (shipParts[i][0] - 1 > -1 && shipParts[i][1] - 1 > -1)
+                        opponentSlotManager.cells[shipParts[i][0] - 1][shipParts[i][1] - 1].GetComponent<OpponentCell>().MakePainted();
+                if ((s0[0] != shipParts[i][0] - 1 || s0[1] != shipParts[i][1] + 0) &&
+                    (s1[0] != shipParts[i][0] - 1 || s1[1] != shipParts[i][1] + 0) &&
+                    (s2[0] != shipParts[i][0] - 1 || s2[1] != shipParts[i][1] + 0) &&
+                    (s3[0] != shipParts[i][0] - 1 || s3[1] != shipParts[i][1] + 0))
+                    if (shipParts[i][0] - 1 > -1)
+                        opponentSlotManager.cells[shipParts[i][0] - 1][shipParts[i][1] + 0].GetComponent<OpponentCell>().MakePainted();
+                if ((s0[0] != shipParts[i][0] - 1 || s0[1] != shipParts[i][1] + 1) &&
+                    (s1[0] != shipParts[i][0] - 1 || s1[1] != shipParts[i][1] + 1) &&
+                    (s2[0] != shipParts[i][0] - 1 || s2[1] != shipParts[i][1] + 1) &&
+                    (s3[0] != shipParts[i][0] - 1 || s3[1] != shipParts[i][1] + 1))
+                    if (shipParts[i][0] - 1 > -1 && shipParts[i][1] + 1 < 10)
+                        opponentSlotManager.cells[shipParts[i][0] - 1][shipParts[i][1] + 1].GetComponent<OpponentCell>().MakePainted();
+
+                if ((s0[0] != shipParts[i][0] + 1 || s0[1] != shipParts[i][1] - 1) &&
+                    (s1[0] != shipParts[i][0] + 1 || s1[1] != shipParts[i][1] - 1) &&
+                    (s2[0] != shipParts[i][0] + 1 || s2[1] != shipParts[i][1] - 1) &&
+                    (s3[0] != shipParts[i][0] + 1 || s3[1] != shipParts[i][1] - 1))
+                    if (shipParts[i][0] + 1 < 10 && shipParts[i][1] - 1 > -1)
+                        opponentSlotManager.cells[shipParts[i][0] + 1][shipParts[i][1] - 1].GetComponent<OpponentCell>().MakePainted();
+                if ((s0[0] != shipParts[i][0] + 1 || s0[1] != shipParts[i][1] + 0) &&
+                    (s1[0] != shipParts[i][0] + 1 || s1[1] != shipParts[i][1] + 0) &&
+                    (s2[0] != shipParts[i][0] + 1 || s2[1] != shipParts[i][1] + 0) &&
+                    (s3[0] != shipParts[i][0] + 1 || s3[1] != shipParts[i][1] + 0))
+                    if (shipParts[i][0] + 1 < 10)
+                        opponentSlotManager.cells[shipParts[i][0] + 1][shipParts[i][1] + 0].GetComponent<OpponentCell>().MakePainted();
+                if ((s0[0] != shipParts[i][0] + 1 || s0[1] != shipParts[i][1] + 1) &&
+                    (s1[0] != shipParts[i][0] + 1 || s1[1] != shipParts[i][1] + 1) &&
+                    (s2[0] != shipParts[i][0] + 1 || s2[1] != shipParts[i][1] + 1) &&
+                    (s3[0] != shipParts[i][0] + 1 || s3[1] != shipParts[i][1] + 1))
+                    if (shipParts[i][0] + 1 < 10 && shipParts[i][1] + 1 < 10)
+                        opponentSlotManager.cells[shipParts[i][0] + 1][shipParts[i][1] +  1].GetComponent<OpponentCell>().MakePainted();
+
+                if ((s0[0] != shipParts[i][0] + 0 || s0[1] != shipParts[i][1] - 1) &&
+                    (s1[0] != shipParts[i][0] + 0 || s1[1] != shipParts[i][1] - 1) &&
+                    (s2[0] != shipParts[i][0] + 0 || s2[1] != shipParts[i][1] - 1) &&
+                    (s3[0] != shipParts[i][0] + 0 || s3[1] != shipParts[i][1] - 1))
+                    if (shipParts[i][1] - 1 > -1)
+                        opponentSlotManager.cells[shipParts[i][0] + 0][shipParts[i][1] - 1].GetComponent<OpponentCell>().MakePainted();
+                if ((s0[0] != shipParts[i][0] + 0 || s0[1] != shipParts[i][1] + 1) &&
+                    (s1[0] != shipParts[i][0] + 0 || s1[1] != shipParts[i][1] + 1) &&
+                    (s2[0] != shipParts[i][0] + 0 || s2[1] != shipParts[i][1] + 1) &&
+                    (s3[0] != shipParts[i][0] + 0 || s3[1] != shipParts[i][1] + 1))
+                    if (shipParts[i][1] + 1 < 10)
+                        opponentSlotManager.cells[shipParts[i][0] + 0][shipParts[i][1] + 1].GetComponent<OpponentCell>().MakePainted();
+                */
+
+                // Don't worry about killed cellss (they will not be painted). This is more beautiful
+                if (shipParts[i][0] - 1 > -1 && shipParts[i][1] - 1 > -1)
+                    opponentSlotManager.cells[shipParts[i][0] - 1][shipParts[i][1] - 1].GetComponent<OpponentCell>().MakePainted();
+                if (shipParts[i][0] - 1 > -1)
+                    opponentSlotManager.cells[shipParts[i][0] - 1][shipParts[i][1]].GetComponent<OpponentCell>().MakePainted();
+                if (shipParts[i][0] - 1 > -1 && shipParts[i][1] + 1 < 10)
+                    opponentSlotManager.cells[shipParts[i][0] - 1][shipParts[i][1] + 1].GetComponent<OpponentCell>().MakePainted();
+
+                if (shipParts[i][0] + 1 < 10 && shipParts[i][1] - 1 > -1)
+                    opponentSlotManager.cells[shipParts[i][0] + 1][shipParts[i][1] - 1].GetComponent<OpponentCell>().MakePainted();
+                if (shipParts[i][0] + 1 < 10)
+                    opponentSlotManager.cells[shipParts[i][0] + 1][shipParts[i][1]].GetComponent<OpponentCell>().MakePainted();
+                if (shipParts[i][0] + 1 < 10 && shipParts[i][1] + 1 < 10)
+                    opponentSlotManager.cells[shipParts[i][0] + 1][shipParts[i][1] + 1].GetComponent<OpponentCell>().MakePainted();
+
+                if (shipParts[i][1] - 1 > -1)
+                    opponentSlotManager.cells[shipParts[i][0]][shipParts[i][1] - 1].GetComponent<OpponentCell>().MakePainted();
+                if (shipParts[i][1] + 1 < 10)
+                    opponentSlotManager.cells[shipParts[i][0]][shipParts[i][1] + 1].GetComponent<OpponentCell>().MakePainted();
+            }
+        }
+    }
+    private void DisplayMyKilledShip(int x, int y)
+    {
+        if (x < 0 || x > 9 || y < 0 || y > 9) return;
+        if (!slotManager.cells[x][y].GetComponent<ShipSlot>().damaged) return;
+
+        int[][] shipParts = new int[][] { null, null, null, null };
+        shipParts[0] = new int[] { x, y };
+
+        int shift = 1;
+        int shipPartNum = 1;
+        while (true) // Check up
+        {
+            if (shift > 3 || shipPartNum > 3)
+            {
+                break;
+            }
+            if (y + shift < 10)
+            {
+                if (slotManager.cells[x][y + shift].GetComponent<ShipSlot>().damaged)
+                {
+                    shipParts[shipPartNum] = new int[] { x, y + shift };
+                    shipPartNum++;
+                }
+                else break;
+            }
+            shift++;
+        }
+        shift = -1;
+        while (true) // Check down
+        {
+            if (shift < -3 || shipPartNum > 3)
+            {
+                break;
+            }
+            if (y + shift > -1)
+            {
+                if (slotManager.cells[x][y + shift].GetComponent<ShipSlot>().damaged)
+                {
+                    shipParts[shipPartNum] = new int[] { x, y + shift };
+                    shipPartNum++;
+                }
+                else break;
+            }
+            shift--;
+        }
+        shift = 1;
+        while (true) // Check right
+        {
+            if (shift > 3 || shipPartNum > 3)
+            {
+                break;
+            }
+            if (x + shift < 10)
+            {
+                if (slotManager.cells[x + shift][y].GetComponent<ShipSlot>().damaged)
+                {
+                    shipParts[shipPartNum] = new int[] { x + shift, y };
+                    shipPartNum++;
+                }
+                else break;
+            }
+            shift++;
+        }
+        shift = -1;
+        while (true) // Check left
+        {
+            if (shift < -3 || shipPartNum > 3)
+            {
+                break;
+            }
+            if (x + shift > -1)
+            {
+                if (slotManager.cells[x + shift][y].GetComponent<ShipSlot>().damaged)
+                {
+                    shipParts[shipPartNum] = new int[] { x + shift, y };
+                    shipPartNum++;
+                }
+                else break;
+            }
+            shift--;
+        }
+
+        for (int i = 0; i < shipParts.Length; i++)
+        {
+            if (shipParts[i] != null)
+            {
+                // Don't worry about killed cellss (they will not be painted). This is more beautiful
+                if (shipParts[i][0] - 1 > -1 && shipParts[i][1] - 1 > -1)
+                    slotManager.cells[shipParts[i][0] - 1][shipParts[i][1] - 1].GetComponent<ShipSlot>().MakePainted();
+                if (shipParts[i][0] - 1 > -1)
+                    slotManager.cells[shipParts[i][0] - 1][shipParts[i][1]].GetComponent<ShipSlot>().MakePainted();
+                if (shipParts[i][0] - 1 > -1 && shipParts[i][1] + 1 < 10)
+                    slotManager.cells[shipParts[i][0] - 1][shipParts[i][1] + 1].GetComponent<ShipSlot>().MakePainted();
+
+                if (shipParts[i][0] + 1 < 10 && shipParts[i][1] - 1 > -1)
+                    slotManager.cells[shipParts[i][0] + 1][shipParts[i][1] - 1].GetComponent<ShipSlot>().MakePainted();
+                if (shipParts[i][0] + 1 < 10)
+                    slotManager.cells[shipParts[i][0] + 1][shipParts[i][1]].GetComponent<ShipSlot>().MakePainted();
+                if (shipParts[i][0] + 1 < 10 && shipParts[i][1] + 1 < 10)
+                    slotManager.cells[shipParts[i][0] + 1][shipParts[i][1] + 1].GetComponent<ShipSlot>().MakePainted();
+
+                if (shipParts[i][1] - 1 > -1)
+                    slotManager.cells[shipParts[i][0]][shipParts[i][1] - 1].GetComponent<ShipSlot>().MakePainted();
+                if (shipParts[i][1] + 1 < 10)
+                    slotManager.cells[shipParts[i][0]][shipParts[i][1] + 1].GetComponent<ShipSlot>().MakePainted();
             }
         }
     }

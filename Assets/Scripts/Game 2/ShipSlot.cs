@@ -30,8 +30,10 @@ public class ShipSlot : MonoBehaviour, IDropHandler
 
     private GameObject shootObject;
     private GameObject cellObject;
+    private GameObject cellPaintObject;
     private Image shootImage;
     private Image cellImage;
+    private Image cellPaintImage;
 
     private void Awake()
     {
@@ -64,11 +66,23 @@ public class ShipSlot : MonoBehaviour, IDropHandler
         cellObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         cellImage.rectTransform.sizeDelta = new Vector2(90, 90);
         cellObject.SetActive(true);
+
+        cellPaintObject = new GameObject();
+        cellPaintImage = cellPaintObject.AddComponent<Image>();
+        cellPaintImage.sprite = null;
+        cellPaintImage.enabled = false;
+        cellPaintObject.GetComponent<RectTransform>().SetParent(canvasObject.GetComponent<Transform>());
+        cellPaintObject.transform.SetSiblingIndex(-1);
+        cellPaintObject.GetComponent<RectTransform>().position = transform.position;
+        cellPaintObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+        cellPaintImage.rectTransform.sizeDelta = new Vector2(90, 90);
+        cellPaintObject.SetActive(true);
     }
 
     public void RepositionPinnedObjects()
     {
         cellObject.GetComponent<RectTransform>().position = transform.position;
+        cellPaintObject.GetComponent<RectTransform>().position = transform.position;
         shootObject.GetComponent<RectTransform>().position = transform.position;
     }
 
@@ -79,6 +93,7 @@ public class ShipSlot : MonoBehaviour, IDropHandler
 
     public void MakeDamaged()
     {
+        if (damaged || missed || painted) return;
         ShowShootSprite();
         cellImage.enabled = true;
         cellImage.sprite = damagedCellSprite;
@@ -87,6 +102,7 @@ public class ShipSlot : MonoBehaviour, IDropHandler
 
     public void MakeMissed()
     {
+        if (damaged || missed || painted) return;
         ShowShootSprite();
         cellImage.enabled = true;
         cellImage.sprite = missedCellSprite;
@@ -95,9 +111,9 @@ public class ShipSlot : MonoBehaviour, IDropHandler
 
     public void MakePainted()
     {
-        ShowShootSprite();
-        cellImage.enabled = true;
-        cellImage.sprite = paintedCellSprite;
+        if (damaged || painted) return;
+        cellPaintImage.enabled = true;
+        cellPaintImage.sprite = paintedCellSprite;
         painted = true;
     }
 

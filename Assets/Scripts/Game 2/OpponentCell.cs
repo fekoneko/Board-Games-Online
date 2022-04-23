@@ -28,9 +28,11 @@ public class OpponentCell : MonoBehaviour
 
     private GameObject cellObject;
     private GameObject shootObject;
+    private GameObject cellPaintObject;
     private GameObject shipObject;
     private Image cellImage;
     private Image shootImage;
+    private Image cellPaintImage;
     private Image shipImage;
 
     private SlotManager slotManager;
@@ -80,6 +82,17 @@ public class OpponentCell : MonoBehaviour
         cellImage.rectTransform.sizeDelta = new Vector2(90, 90);
         cellObject.SetActive(true);
 
+        cellPaintObject = new GameObject();
+        cellPaintImage = cellPaintObject.AddComponent<Image>();
+        cellPaintImage.sprite = null;
+        cellPaintImage.enabled = false;
+        cellPaintObject.GetComponent<RectTransform>().SetParent(canvasObject.GetComponent<Transform>());
+        cellPaintObject.transform.SetSiblingIndex(-1);
+        cellPaintObject.GetComponent<RectTransform>().position = transform.position;
+        cellPaintObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+        cellPaintImage.rectTransform.sizeDelta = new Vector2(90, 90);
+        cellPaintObject.SetActive(true);
+
         shipObject = new GameObject();
         shipImage = shipObject.AddComponent<Image>();
         shipImage.sprite = null;
@@ -98,6 +111,7 @@ public class OpponentCell : MonoBehaviour
     {
         cellObject.GetComponent<RectTransform>().position = transform.position;
         shootObject.GetComponent<RectTransform>().position = transform.position;
+        cellPaintObject.GetComponent<RectTransform>().position = transform.position;
         shipObject.GetComponent<RectTransform>().position = transform.position;
     }
 
@@ -108,6 +122,7 @@ public class OpponentCell : MonoBehaviour
 
     public void MakeDamaged()
     {
+        if (damaged || missed || painted) return;
         cellImage.enabled = true;
         cellImage.sprite = damagedCellSprite;
         damaged = true;
@@ -116,6 +131,7 @@ public class OpponentCell : MonoBehaviour
 
     public void MakeMissed()
     {
+        if (damaged || missed || painted) return;
         cellImage.enabled = true;
         cellImage.sprite = missedCellSprite;
         missed = true;
@@ -124,8 +140,9 @@ public class OpponentCell : MonoBehaviour
 
     public void MakePainted()
     {
-        cellImage.enabled = true;
-        cellImage.sprite = paintedCellSprite;
+        if (damaged || painted) return;
+        cellPaintImage.enabled = true;
+        cellPaintImage.sprite = paintedCellSprite;
         painted = true;
         button.interactable = false;
     }
