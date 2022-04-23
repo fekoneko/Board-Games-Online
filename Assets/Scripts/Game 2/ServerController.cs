@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class ServerController : MonoBehaviour
 {
     [SerializeField] private GameObject shipManagerObject;
+    [SerializeField] private GameObject slotManagerObject;
     [SerializeField] private GameObject opponentSlotManagerObject;
     [SerializeField] private GameObject readyButtonObject;
 
     private ShipManager shipManager;
+    private SlotManager slotManager;
     private SlotManager opponentSlotManager;
     private ReadyButton readyButton;
     private MainServerController2 mainServerController;
@@ -21,6 +23,7 @@ public class ServerController : MonoBehaviour
         gameObject.tag = "serverController";
 
         shipManager = shipManagerObject.GetComponent<ShipManager>();
+        slotManager = slotManagerObject.GetComponent<SlotManager>();
         opponentSlotManager = opponentSlotManagerObject.GetComponent<SlotManager>();
         readyButton = readyButtonObject.GetComponent<ReadyButton>();
 
@@ -74,10 +77,18 @@ public class ServerController : MonoBehaviour
 
     public void ServerHandle_Shoot(int shootX, int shootY, string callback)
     {
-        // Something here
-        if (callback == "missed")
+        switch(callback)
         {
-            ChangeTurn(true);
+            case "missed":
+                slotManager.cells[shootY][shootX].GetComponent<ShipSlot>().MakeMissed();
+                ChangeTurn(true);
+                break;
+            case "damaged":
+                slotManager.cells[shootY][shootX].GetComponent<ShipSlot>().MakeDamaged();
+                break;
+            case "killed":
+                slotManager.cells[shootY][shootX].GetComponent<ShipSlot>().MakeDamaged();
+                break;
         }
     }
 

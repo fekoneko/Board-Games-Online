@@ -80,6 +80,8 @@ public class MainServerController2 : MonoBehaviour
 
     private void HandleMessage(string message)
     {
+        Debug.Log(message);
+
         string[] sMessage = message.Split(";");
 
         if (sMessage.Length > 0)
@@ -227,7 +229,7 @@ public class MainServerController2 : MonoBehaviour
                         if (serverControllerObject != null)
                         {
                             serverController = serverControllerObject.GetComponent<ServerController>();
-                            serverController.ServerHandle_Shoot(shootX, shootY, "damaged");
+                            serverController.ServerHandle_Shoot(shootX, shootY, "missed");
                         }
                     }
                     break;

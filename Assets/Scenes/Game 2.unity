@@ -504,6 +504,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 1, y: 3}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &23751345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +609,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 9, y: 1}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &24577732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,6 +878,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 0, y: 9}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &25557507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -941,6 +983,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 5, y: 2}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &35974189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1181,6 +1237,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 4, y: 7}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &52428835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1591,8 +1661,10 @@ MonoBehaviour:
   horizontally: 1
   basePosition: {x: 0, y: 0}
   pinPosition: {x: 0, y: 0}
+  pinShipSlot: {fileID: 0}
   rotationAngle: 0
   rotationAngleCur: 0
+  canMove: 1
 --- !u!225 &88791148
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1763,6 +1835,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 6, y: 6}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &116574460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1854,6 +1940,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 2, y: 3}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &117321011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1945,6 +2045,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 1, y: 9}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &135091781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2036,6 +2150,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 4, y: 0}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &138869023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2127,6 +2255,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 7, y: 9}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &154466738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2382,6 +2524,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 5, y: 0}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &159429609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2578,6 +2734,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 9, y: 7}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &186548172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2997,6 +3167,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 6, y: 4}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &211632538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3088,6 +3272,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 9, y: 2}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &215157628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3179,6 +3377,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 8, y: 7}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &220746196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3375,6 +3587,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 4, y: 1}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &248315584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3643,8 +3869,10 @@ MonoBehaviour:
   horizontally: 1
   basePosition: {x: 0, y: 0}
   pinPosition: {x: 0, y: 0}
+  pinShipSlot: {fileID: 0}
   rotationAngle: 0
   rotationAngleCur: 0
+  canMove: 1
 --- !u!225 &276730708
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5346,8 +5574,10 @@ MonoBehaviour:
   horizontally: 1
   basePosition: {x: 0, y: 0}
   pinPosition: {x: 0, y: 0}
+  pinShipSlot: {fileID: 0}
   rotationAngle: 0
   rotationAngleCur: 0
+  canMove: 1
 --- !u!225 &331099965
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5493,6 +5723,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 6, y: 1}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &337769835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5584,6 +5828,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 8, y: 6}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &340975349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5675,6 +5933,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 0, y: 6}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &352557648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5766,6 +6038,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 5, y: 4}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &364473157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6021,6 +6307,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 6, y: 2}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &381203786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6112,6 +6412,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 4, y: 3}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &383873605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6367,6 +6681,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 1, y: 4}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &399245283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6458,6 +6786,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 1, y: 7}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &428707782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6549,6 +6891,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 1, y: 6}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &434274428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6968,6 +7324,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 0, y: 7}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &447725013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7059,6 +7429,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 4, y: 9}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &455234674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7150,6 +7534,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 7, y: 7}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &458747497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7317,6 +7715,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 0, y: 3}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &470055846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7408,6 +7820,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 5, y: 3}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &477326344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7499,6 +7925,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 8, y: 3}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &498263375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7590,6 +8030,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 2, y: 7}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &519446101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7845,6 +8299,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 0, y: 2}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &533010451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7936,6 +8404,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 4, y: 4}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &540994262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8355,6 +8837,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 7, y: 1}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &588475525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8610,6 +9106,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 0, y: 1}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &607835811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9029,6 +9539,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 7, y: 5}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &627113659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9120,6 +9644,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 3, y: 8}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &634434625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9480,6 +10018,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 3, y: 7}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &656472831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9571,6 +10123,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 2, y: 9}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &670227257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9662,6 +10228,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 8, y: 5}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &671896203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9753,6 +10333,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 2, y: 6}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &674919662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9844,6 +10438,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 5, y: 5}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &681547514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9935,6 +10543,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 7, y: 2}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &694033071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10026,6 +10648,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 2, y: 5}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &719700615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10684,6 +11320,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 6, y: 5}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &750307758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11103,6 +11753,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 5, y: 1}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &760854566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11194,6 +11858,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 2, y: 1}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &764599690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11563,6 +12241,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 3, y: 4}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &796984172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11818,6 +12510,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 5, y: 8}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &802787856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12332,6 +13038,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 1, y: 8}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &828961852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12423,6 +13143,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 3, y: 3}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &845431921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12514,6 +13248,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 6, y: 3}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &853592518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12933,6 +13681,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 8, y: 9}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &869935114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13188,6 +13950,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 6, y: 7}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &877766600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13607,6 +14383,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 3, y: 9}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &905260840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13698,6 +14488,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 3, y: 1}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &906224797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13798,8 +14602,10 @@ MonoBehaviour:
   horizontally: 1
   basePosition: {x: 0, y: 0}
   pinPosition: {x: 0, y: 0}
+  pinShipSlot: {fileID: 0}
   rotationAngle: 0
   rotationAngleCur: 0
+  canMove: 1
 --- !u!225 &909725851
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -14029,6 +14835,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 8, y: 8}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &923555861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14612,6 +15432,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 3, y: 6}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &949995012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14943,6 +15777,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 1, y: 0}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &966215876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15034,6 +15882,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 3, y: 2}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &967110939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15289,6 +16151,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 9, y: 6}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &980960100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15977,6 +16853,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 9, y: 9}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1000422483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16498,6 +17388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipManagerObject: {fileID: 747393461}
+  slotManagerObject: {fileID: 1704128328}
   opponentSlotManagerObject: {fileID: 1307698513}
   readyButtonObject: {fileID: 779728568}
 --- !u!1 &1042796321
@@ -16822,6 +17713,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 3, y: 5}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1081786036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16913,6 +17818,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 8, y: 1}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1083995459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17168,6 +18087,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 0, y: 4}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1089791931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18886,6 +19819,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 2, y: 4}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1232498426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19305,6 +20252,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 6, y: 9}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1261123533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19569,8 +20530,10 @@ MonoBehaviour:
   horizontally: 1
   basePosition: {x: 0, y: 0}
   pinPosition: {x: 0, y: 0}
+  pinShipSlot: {fileID: 0}
   rotationAngle: 0
   rotationAngleCur: 0
+  canMove: 1
 --- !u!225 &1273363740
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -19636,6 +20599,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 5, y: 7}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1288271540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20219,6 +21196,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 2, y: 0}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1293964433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20310,6 +21301,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 3, y: 0}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1303317074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20565,6 +21570,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 1, y: 1}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1307238585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20917,6 +21936,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 1, y: 2}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1325767983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21008,6 +22041,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 7, y: 8}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1337069504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21099,6 +22146,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 0, y: 8}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1339021518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21525,8 +22586,10 @@ MonoBehaviour:
   horizontally: 1
   basePosition: {x: 0, y: 0}
   pinPosition: {x: 0, y: 0}
+  pinShipSlot: {fileID: 0}
   rotationAngle: 0
   rotationAngleCur: 0
+  canMove: 1
 --- !u!225 &1376710098
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -21592,6 +22655,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 2, y: 8}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1388469657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21788,6 +22865,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 9, y: 5}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1399519525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21984,6 +23075,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 7, y: 4}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1432046963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22094,8 +23199,10 @@ MonoBehaviour:
   horizontally: 1
   basePosition: {x: 0, y: 0}
   pinPosition: {x: 0, y: 0}
+  pinShipSlot: {fileID: 0}
   rotationAngle: 0
   rotationAngleCur: 0
+  canMove: 1
 --- !u!1 &1438883636
 GameObject:
   m_ObjectHideFlags: 0
@@ -22313,6 +23420,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 7, y: 3}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1439579624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23068,6 +24189,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 6, y: 8}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1495652381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23920,6 +25055,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 7, y: 0}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1591009495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24011,6 +25160,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 4, y: 2}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1618353347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24102,6 +25265,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 9, y: 4}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1628374595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24193,6 +25370,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 7, y: 6}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1632938031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24448,6 +25639,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 4, y: 5}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1649219969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25300,6 +26505,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 8, y: 4}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1702500618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25825,8 +27044,10 @@ MonoBehaviour:
   horizontally: 1
   basePosition: {x: 0, y: 0}
   pinPosition: {x: 0, y: 0}
+  pinShipSlot: {fileID: 0}
   rotationAngle: 0
   rotationAngleCur: 0
+  canMove: 1
 --- !u!225 &1712185902
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -25892,6 +27113,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 9, y: 3}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1732853383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26621,6 +27856,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 9, y: 0}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1754527993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26712,6 +27961,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 0, y: 0}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1758276372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26967,6 +28230,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 2, y: 2}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1793423849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27721,8 +28998,10 @@ MonoBehaviour:
   horizontally: 1
   basePosition: {x: 0, y: 0}
   pinPosition: {x: 0, y: 0}
+  pinShipSlot: {fileID: 0}
   rotationAngle: 0
   rotationAngleCur: 0
+  canMove: 1
 --- !u!225 &1904079515
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -28057,6 +29336,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 0, y: 5}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &1955967320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29283,6 +30576,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 5, y: 9}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &2044383558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29374,6 +30681,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 4, y: 8}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &2051052335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29629,6 +30950,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 8, y: 2}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &2066948225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29720,6 +31055,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 8, y: 0}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &2070212711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29811,6 +31160,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 4, y: 6}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &2085487727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29902,6 +31265,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 1, y: 5}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &2115621124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29993,6 +31370,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 6, y: 0}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &2124656783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30084,6 +31475,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 9, y: 8}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &2127633259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30175,6 +31580,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cell: {x: 5, y: 6}
   slotManagerObject: {fileID: 1704128328}
+  missedCellSprite: {fileID: 21300000, guid: 011c192ff32dbff44acc5ba2a10eee87, type: 3}
+  damagedCellSprite: {fileID: 21300000, guid: 3d8c7e4dfa46e20408a622d011120621, type: 3}
+  paintedCellSprite: {fileID: 21300000, guid: b7b167dee5778704f8bcb55ac634be45, type: 3}
+  shootSpriteList:
+  - {fileID: 21300000, guid: e2e55c164df063d4eb3f233bc4d23628, type: 3}
+  - {fileID: 21300000, guid: 15f257e047a2e3149a6f18cb188714f6, type: 3}
+  - {fileID: 21300000, guid: 844dc565a137bde45aa36bf6aeadcb55, type: 3}
+  - {fileID: 21300000, guid: e2b646d054c3bf74ca3fd0a18fb6cea3, type: 3}
+  - {fileID: 21300000, guid: e3eaac163779db247bbe849066d47a10, type: 3}
+  - {fileID: 21300000, guid: c09cd6506681e5a459bb4b5417e199a0, type: 3}
+  - {fileID: 21300000, guid: f86c1a3148c76ab41b7e20b8a0d395f6, type: 3}
+  damaged: 0
+  missed: 0
+  painted: 0
 --- !u!114 &2129260560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30277,8 +31696,10 @@ MonoBehaviour:
   horizontally: 1
   basePosition: {x: 0, y: 0}
   pinPosition: {x: 0, y: 0}
+  pinShipSlot: {fileID: 0}
   rotationAngle: 0
   rotationAngleCur: 0
+  canMove: 1
 --- !u!225 &2136038619
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -74,28 +74,7 @@ public class OpponentCell : MonoBehaviour
 
     public void Update()
     {
-        if (shootImageTime > -1.0f)
-        {
-            if (shootImageTime < shootSpriteList.Length * 0.1)
-            {
-                if (shootImageTime - shootImageTimePr > 0.1 && shootImageStep < shootSpriteList.Length)
-                {
-                    shootImage.sprite = shootSpriteList[shootImageStep];
-                    shootImageStep++;
-                    shootImageTimePr += 0.1f;
-                }
-                shootImageTime += Time.deltaTime;
-            }
-            else
-            {
-                shootImageTime = -1.0f;
-                shootImageTimePr = -0.1f;
-                shootImageStep = 0;
-
-                shootImage.sprite = null;
-                shootImage.enabled = false;
-            }
-        }
+        UpdateShootSprite();
     }
 
     public void MakeDamaged()
@@ -129,11 +108,42 @@ public class OpponentCell : MonoBehaviour
         slotManager.lastShootX = (int)cell.y; // Swapped
         slotManager.lastShootY = (int)cell.x;
 
+        ShowShootSprite();
+    }
+
+    private void ShowShootSprite()
+    {
         shootImageTime = 0.0f; // Animate
         shootImageTimePr = -0.1f;
         shootImageStep = 0;
 
         shootImage.enabled = true;
         shootImage.sprite = shootSpriteList[0];
+    }
+
+    private void UpdateShootSprite()
+    {
+        if (shootImageTime > -1.0f)
+        {
+            if (shootImageTime < shootSpriteList.Length * 0.1)
+            {
+                if (shootImageTime - shootImageTimePr > 0.1 && shootImageStep < shootSpriteList.Length)
+                {
+                    shootImage.sprite = shootSpriteList[shootImageStep];
+                    shootImageStep++;
+                    shootImageTimePr += 0.1f;
+                }
+                shootImageTime += Time.deltaTime;
+            }
+            else
+            {
+                shootImageTime = -1.0f;
+                shootImageTimePr = -0.1f;
+                shootImageStep = 0;
+
+                shootImage.sprite = null;
+                shootImage.enabled = false;
+            }
+        }
     }
 }
