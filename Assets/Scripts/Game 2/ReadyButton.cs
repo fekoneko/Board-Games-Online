@@ -159,6 +159,22 @@ public class ReadyButton : MonoBehaviour
                     shipDragDrop.basePosition = shipDragDrop.pinShipSlot.transform.position;
                     shipDragDrop.canMove = true;
                 }
+                foreach (GameObject[] i in slotManager.cells)
+                {
+                    foreach (GameObject j in i)
+                    {
+                        ShipSlot shipSlot = j.GetComponent<ShipSlot>();
+                        shipSlot.RepositionPinnedObjects();
+                    }
+                }
+                foreach (GameObject[] i in opponentSlotsObject.GetComponent<SlotManager>().cells)
+                {
+                    foreach (GameObject j in i)
+                    {
+                        OpponentCell opponentCell = j.GetComponent<OpponentCell>();
+                        opponentCell.RepositionPinnedObjects();
+                    }
+                }
                 Destroy(gameObject);
             }
         }

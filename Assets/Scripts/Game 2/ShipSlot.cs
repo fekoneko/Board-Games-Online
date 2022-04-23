@@ -12,6 +12,7 @@ public class ShipSlot : MonoBehaviour, IDropHandler
     [SerializeField] private Sprite damagedCellSprite;
     [SerializeField] private Sprite paintedCellSprite;
     [SerializeField] private Sprite[] shootSpriteList;
+    [SerializeField] private GameObject canvasObject;
 
     public GameObject[][] cells;
     private RectTransform rectTransform;
@@ -46,8 +47,9 @@ public class ShipSlot : MonoBehaviour, IDropHandler
         shootImage = shootObject.AddComponent<Image>();
         shootImage.sprite = null;
         shootImage.enabled = false;
-        shootObject.GetComponent<RectTransform>().SetParent(this.transform);
-        shootObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+        shootObject.GetComponent<RectTransform>().SetParent(canvasObject.GetComponent<Transform>());
+        shootObject.transform.SetSiblingIndex(-1);
+        shootObject.GetComponent<RectTransform>().position = transform.position;
         shootObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         shootImage.rectTransform.sizeDelta = new Vector2(90, 90);
         shootObject.SetActive(true);
@@ -56,11 +58,18 @@ public class ShipSlot : MonoBehaviour, IDropHandler
         cellImage = cellObject.AddComponent<Image>();
         cellImage.sprite = null;
         cellImage.enabled = false;
-        cellObject.GetComponent<RectTransform>().SetParent(this.transform);
-        cellObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+        cellObject.GetComponent<RectTransform>().SetParent(canvasObject.GetComponent<Transform>());
+        cellObject.transform.SetSiblingIndex(-1);
+        cellObject.GetComponent<RectTransform>().position = transform.position;
         cellObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         cellImage.rectTransform.sizeDelta = new Vector2(90, 90);
         cellObject.SetActive(true);
+    }
+
+    public void RepositionPinnedObjects()
+    {
+        cellObject.GetComponent<RectTransform>().position = transform.position;
+        shootObject.GetComponent<RectTransform>().position = transform.position;
     }
 
     public void Update()

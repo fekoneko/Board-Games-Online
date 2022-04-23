@@ -49,7 +49,8 @@ public class ShipDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
     {
         if (disabled) return;
         //Debug.Log("OnDrag");
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        //rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        rectTransform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         if (horizontally)
             rotationAngle = 0.01f * eventData.delta.y / (canvas.scaleFactor * Time.deltaTime);
         else

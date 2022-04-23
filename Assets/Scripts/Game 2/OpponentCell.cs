@@ -13,16 +13,25 @@ public class OpponentCell : MonoBehaviour
     [SerializeField] private Sprite paintedCellSprite;
     [SerializeField] private Sprite[] shootSpriteList;
     [SerializeField] private GameObject serverControllerObject;
+    [SerializeField] private Sprite shipBorderSpriteULBR;
+    [SerializeField] private Sprite shipBorderSpriteULR;
+    [SerializeField] private Sprite shipBorderSpriteLR;
+    [SerializeField] private Sprite shipBorderSpriteLBR;
+    [SerializeField] private GameObject canvasObject;
+
 
     public GameObject[][] cells;
 
     private RectTransform rectTransform;
     private Image image;
     private Button button;
+
     private GameObject cellObject;
-    private Image cellImage;
     private GameObject shootObject;
+    private GameObject shipObject;
+    private Image cellImage;
     private Image shootImage;
+    private Image shipImage;
 
     private SlotManager slotManager;
     private ServerController serverController;
@@ -53,8 +62,9 @@ public class OpponentCell : MonoBehaviour
         shootImage = shootObject.AddComponent<Image>();
         shootImage.sprite = null;
         shootImage.enabled = false;
-        shootObject.GetComponent<RectTransform>().SetParent(this.transform);
-        shootObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+        shootObject.GetComponent<RectTransform>().SetParent(canvasObject.GetComponent<Transform>());
+        shootObject.transform.SetSiblingIndex(-1);
+        shootObject.GetComponent<RectTransform>().position = transform.position;
         shootObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         shootImage.rectTransform.sizeDelta = new Vector2(90, 90);
         shootObject.SetActive(true);
@@ -63,13 +73,32 @@ public class OpponentCell : MonoBehaviour
         cellImage = cellObject.AddComponent<Image>();
         cellImage.sprite = null;
         cellImage.enabled = false;
-        cellObject.GetComponent<RectTransform>().SetParent(this.transform);
-        cellObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+        cellObject.GetComponent<RectTransform>().SetParent(canvasObject.GetComponent<Transform>());
+        cellObject.transform.SetSiblingIndex(-1);
+        cellObject.GetComponent<RectTransform>().position = transform.position;
         cellObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         cellImage.rectTransform.sizeDelta = new Vector2(90, 90);
         cellObject.SetActive(true);
 
+        shipObject = new GameObject();
+        shipImage = shipObject.AddComponent<Image>();
+        shipImage.sprite = null;
+        shipImage.enabled = false;
+        shipObject.GetComponent<RectTransform>().SetParent(canvasObject.GetComponent<Transform>());
+        shipObject.transform.SetSiblingIndex(-1);
+        shipObject.GetComponent<RectTransform>().position = transform.position;
+        shipObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+        shipImage.rectTransform.sizeDelta = new Vector2(90, 90);
+        shipObject.SetActive(true);
+
         button.interactable = true;
+    }
+
+    public void RepositionPinnedObjects()
+    {
+        cellObject.GetComponent<RectTransform>().position = transform.position;
+        shootObject.GetComponent<RectTransform>().position = transform.position;
+        shipObject.GetComponent<RectTransform>().position = transform.position;
     }
 
     public void Update()
@@ -99,6 +128,31 @@ public class OpponentCell : MonoBehaviour
         cellImage.sprite = paintedCellSprite;
         painted = true;
         button.interactable = false;
+    }
+
+    public void SetShipSprite(string spriteID, float rotation)
+    {
+        Sprite sprite = null;
+        switch (spriteID)
+        {
+            case "ULBR":
+                sprite = shipBorderSpriteULBR;
+                break;
+            case "ULR":
+                sprite = shipBorderSpriteULR;
+                break;
+            case "LR":
+                sprite = shipBorderSpriteLR;
+                break;
+            case "LBR":
+                sprite = shipBorderSpriteLBR;
+                break;
+        }
+        if (sprite == null) return;
+        
+        shipImage.enabled = true;
+        shipImage.sprite = sprite;
+        shipObject.transform.rotation = Quaternion.AngleAxis(rotation, Vector3.back);
     }
 
     private void TaskOnClick()

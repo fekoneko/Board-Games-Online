@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -65,7 +66,7 @@ public class ServerController : MonoBehaviour
                     break;
                 case "killed":
                     opponentSlotManager.cells[opponentSlotManager.lastShootX][opponentSlotManager.lastShootY].GetComponent<OpponentCell>().MakeDamaged();
-                    // Something here
+                    DisplayKilledShip(opponentSlotManager.lastShootX, opponentSlotManager.lastShootY);
                     break;
             }
         }
@@ -209,5 +210,151 @@ public class ServerController : MonoBehaviour
             i++;
         }
         return shipPositions;
+    }
+
+    private void DisplayKilledShip(int x, int y)
+    {
+        if (x < 0 || x > 9 || y < 0 || y > 9) return;
+        if (!opponentSlotManager.cells[x][y].GetComponent<OpponentCell>().damaged) return;
+
+        int[][] shipParts = new int[][] { null, null, null, null };
+        shipParts[0] = new int[] { x, y };
+
+        int shift = 1;
+        int shipPartNum = 1;
+        while (true) // Check up
+        {
+            if (shift > 3 || shipPartNum > 3)
+            {
+                break;
+            }
+            if (y + shift < 10)
+            {
+                if (opponentSlotManager.cells[x][y + shift].GetComponent<OpponentCell>().damaged)
+                {
+                    shipParts[shipPartNum] = new int[] { x, y + shift };
+                    shipPartNum++;
+                }
+                else break;
+            }
+            shift++;
+        }
+        shift = -1;
+        while (true) // Check down
+        {
+            if (shift < -3 || shipPartNum > 3)
+            {
+                break;
+            }
+            if (y + shift > -1)
+            {
+                if (opponentSlotManager.cells[x][y + shift].GetComponent<OpponentCell>().damaged)
+                {
+                    shipParts[shipPartNum] = new int[] { x, y + shift };
+                    shipPartNum++;
+                }
+                else break;
+            }
+            shift--;
+        }
+        shift = 1;
+        while (true) // Check right
+        {
+            if (shift > 3 || shipPartNum > 3)
+            {
+                break;
+            }
+            if (x + shift < 10)
+            {
+                if (opponentSlotManager.cells[x + shift][y].GetComponent<OpponentCell>().damaged)
+                {
+                    shipParts[shipPartNum] = new int[] { x + shift, y };
+                    shipPartNum++;
+                }
+                else break;
+            }
+            shift++;
+        }
+        shift = -1;
+        while (true) // Check left
+        {
+            if (shift < -3 || shipPartNum > 3)
+            {
+                break;
+            }
+            if (x + shift > -1)
+            {
+                if (opponentSlotManager.cells[x + shift][y].GetComponent<OpponentCell>().damaged)
+                {
+                    shipParts[shipPartNum] = new int[] { x + shift, y };
+                    shipPartNum++;
+                }
+                else break;
+            }
+            shift--;
+        }
+
+        for (int i = 0; i < shipParts.Length; i++)
+        {
+            if (shipParts[i] != null)
+            {
+                bool noU = false;
+                bool noL = false;
+                bool noB = false;
+                bool noR = false;
+                for (int j = 0; j < shipParts.Length; j++)
+                {
+                    if (shipParts[j] != null)
+                    {
+                        if (shipParts[i][1] + 1 == shipParts[j][1] && shipParts[i][0] == shipParts[j][0]) noU = true;
+                        if (shipParts[i][0] - 1 == shipParts[j][0] && shipParts[i][1] == shipParts[j][1]) noL = true;
+                        if (shipParts[i][1] - 1 == shipParts[j][1] && shipParts[i][0] == shipParts[j][0]) noB = true;
+                        if (shipParts[i][0] + 1 == shipParts[j][0] && shipParts[i][1] == shipParts[j][1]) noR = true;
+                    }
+                }
+                string spriteID = "";
+                float rotation = 0f;
+                if (!noU && !noL && !noB && !noR)
+                {
+                    spriteID = "ULBR";
+                    rotation = 0f;
+                }
+                else if (!noU && !noL && noB && !noR)
+                {
+                    spriteID = "ULR";
+                    rotation = 0f;
+                }
+                else if (!noU && noL && !noB && !noR)
+                {
+                    spriteID = "ULR";
+                    rotation = 90f;
+                }
+                else if (noU && !noL && !noB && !noR)
+                {
+                    spriteID = "LBR";
+                    rotation = 0f;
+                }
+                else if (!noU && !noL && !noB && noR)
+                {
+                    spriteID = "LBR";
+                    rotation = 90f;
+                }
+                else if (noU && !noL && noB && !noR)
+                {
+                    spriteID = "LR";
+                    rotation = 0f;
+                }
+                else if (!noU && noL && !noB && noR)
+                {
+                    spriteID = "LR";
+                    rotation = 90f;
+                }
+                else spriteID = "ULBR";
+                // All the derections are completely confused, do not look on 'em. I'm sorry ^_^
+
+                opponentSlotManager.cells[shipParts[i][0]][shipParts[i][1]].GetComponent<OpponentCell>().SetShipSprite(spriteID, rotation + 90f);
+
+            }
+        }
     }
 }
