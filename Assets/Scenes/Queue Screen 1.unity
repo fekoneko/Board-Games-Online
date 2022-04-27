@@ -734,6 +734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1793c528ef61d7d4f9e589c0dea06607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serverUrlFileName: server_url.txt
+  serverUrlFileName: server_url1.txt
   gameExited: 0
   gameResult: 0
