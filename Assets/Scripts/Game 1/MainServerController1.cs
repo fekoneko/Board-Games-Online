@@ -32,7 +32,7 @@ public class MainServerController1 : MonoBehaviour
             else
             {
                 //System.IO.File.CreateText(path);
-                serverUrl = "http://localhost:5000/shipbattle";
+                serverUrl = "http://localhost:5000/ticktacktoe";
                 System.IO.File.WriteAllText(path, serverUrl);
             }
 
@@ -244,5 +244,11 @@ public class MainServerController1 : MonoBehaviour
                 }
                 break;
         }
+    }
+    public void Server_SendShoot(int shootX, int shootY)
+    {
+        if (hubConnection == null) return;
+        if (hubConnection.ConnectionId == null) return;
+        hubConnection.InvokeAsync("Move", shootX, shootY);
     }
 }

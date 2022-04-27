@@ -32,11 +32,11 @@ public class GameEndText : MonoBehaviour
                 break;
         }
 
-        if (gameResult == 0) // Won
+        if (gameResult == 1) // Won
         {
             GetComponent<Text>().text = "Вы победили!";
         }
-        else if (gameResult == 1) // Lost
+        else if (gameResult == 0) // Lost
         {
             GetComponent<Text>().text = "Вы проиграли!";
         }

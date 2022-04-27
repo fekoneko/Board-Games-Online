@@ -46,6 +46,7 @@ public class GridController : MonoBehaviour
     private void OnCellPressed(Cell cell)
     {
         cell.SetId(isMyTurn);
+        mainServerController.Server_SendShoot(cell.x, cell.y);
         lastX = cell.x;
         lastY = cell.y;
         SetTurn(false);

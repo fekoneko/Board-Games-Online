@@ -176,7 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6a4a68a33d61a44a68fc3ec26f904d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: Main Menu
+  sceneName: Main Menu
+  breakConnection: 1
 --- !u!114 &51858057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,6 +326,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _size: 3
   _cellPrefab: {fileID: 7382305182519146418, guid: 2c1d3cd4a89432d4cb46c62c25066ffc, type: 3}
+  isMyTurn: 0
+  isCircle: 1
+  lastX: 0
+  lastY: 0
 --- !u!114 &147528691
 MonoBehaviour:
   m_ObjectHideFlags: 0
