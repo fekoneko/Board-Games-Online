@@ -16,6 +16,7 @@ public class MainServerController2 : MonoBehaviour
     private bool gameEnded = false;
     public bool gameExited = false;
     private bool fightStarted = false;
+    private bool shipsPlaced = false;
     private float gameEndTime = 0.0f;
 
     public bool gameResult = false;
@@ -108,7 +109,7 @@ public class MainServerController2 : MonoBehaviour
                     ServerHandle_Error(errorCode);
                     break;
 
-                case "started":
+                case "selected":
                     bool isMyTurn;
                     if (sMessage.Length >= 2) // Just in case
                     {
@@ -124,10 +125,9 @@ public class MainServerController2 : MonoBehaviour
                     gameStarted = true;
                     break;
 
-                /*
-                case "success":
+                case "placed":
+                    shipsPlaced = true;
                     break;
-                */
 
                 case "fight":
                     serverControllerObject = GameObject.FindGameObjectWithTag("serverController");
@@ -140,7 +140,7 @@ public class MainServerController2 : MonoBehaviour
                     }
                     break;
 
-                case "killed":
+                case "destroyed":
                     serverControllerObject = GameObject.FindGameObjectWithTag("serverController");
                     if (sMessage.Length == 1)
                     {
@@ -173,7 +173,7 @@ public class MainServerController2 : MonoBehaviour
                     }
                     break;
 
-                case "injured":
+                case "damaged":
                     serverControllerObject = GameObject.FindGameObjectWithTag("serverController");
                     if (sMessage.Length == 1)
                     {
@@ -246,7 +246,7 @@ public class MainServerController2 : MonoBehaviour
                         hubConnection.DisposeAsync();
                         hubConnection = null;
                     }
-                    if (fightStarted)
+                    if (shipsPlaced)
                     {
                         ServerHandle_EndBattle(true);
                         gameEnded = true;
@@ -260,7 +260,7 @@ public class MainServerController2 : MonoBehaviour
                         hubConnection.DisposeAsync();
                         hubConnection = null;
                     }
-                    if (fightStarted)
+                    if (shipsPlaced)
                     {
                         ServerHandle_EndBattle(false);
                         gameEnded = true;
