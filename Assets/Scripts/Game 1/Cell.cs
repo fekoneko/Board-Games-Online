@@ -6,12 +6,16 @@ using UnityEngine.UI;
 public class Cell : MonoBehaviour
 {
     public System.Action<Cell> onCellPressed;
-    public int playerId { get; private set; } = -1;
+    public bool isCircle = true;
+    public bool active = true;
+    public bool isMyTurn = false;
+    public int x = 0;
+    public int y = 0;
 
-    public void SetId(int id)
+    public void SetId(bool id)
     {
-        playerId = id;
-        UpdateBackgroundColor();
+        isMyTurn = id;
+        //UpdateBackgroundSprite(); // When is correct
     }
 
     public void OnCellPressed()
@@ -19,11 +23,13 @@ public class Cell : MonoBehaviour
         onCellPressed?.Invoke(this);
     }
 
-    [SerializeField] private Sprite _teamAColor;
-    [SerializeField] private Sprite _teamBColor;
-    [SerializeField] private Image _cellBackground;
-    private void UpdateBackgroundColor()
+    [SerializeField] private Sprite circleSprite;
+    [SerializeField] private Sprite crossSprite;
+    [SerializeField] private Image cellBackground;
+    public void UpdateBackgroundSprite()
     {
-        _cellBackground.sprite = playerId == 0 ? _teamAColor : _teamBColor;
+        cellBackground.sprite = isCircle ? circleSprite : crossSprite;
+        GetComponent<Button>().interactable = false;
+        active = false;
     }
 }

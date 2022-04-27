@@ -1,20 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GridController : MonoBehaviour
 {
     [SerializeField] private int _size = 3;
     [SerializeField] private Cell _cellPrefab;
 
-    private Cell[,] _grid;
-    private int playerId;
-    public void Awake()
+    public Cell[,] _grid;
+    private MainServerController1 mainServerController;
+    public bool isMyTurn = false;
+    public bool isCircle = true;
+    public int lastX = 0;
+    public int lastY = 0;
+
+    public void Start()
     {
-        playerId = Random.Range(0, 2);
-        initializeGrid();
+        GameObject mainServerControllerObject = GameObject.FindGameObjectWithTag("mainServerController");
+        if (mainServerControllerObject != null)
+        {
+            mainServerController = mainServerControllerObject.GetComponent<MainServerController1>();
+        }
+        else
+        {
+            mainServerController = null;
+        }
+        IinitializeGrid();
     }
-    private void initializeGrid()
+    private void IinitializeGrid()
     {
         _grid = new Cell[_size, _size];
         for (int i = 0; i < _size; i++)
@@ -22,19 +36,23 @@ public class GridController : MonoBehaviour
             {
                 _grid[i, j] = Instantiate(_cellPrefab, transform);
                 _grid[i, j].onCellPressed += OnCellPressed;
+                _grid[i, j].isCircle = isCircle;
+                _grid[i, j].x = i;
+                _grid[i, j].y = j;
+                _grid[i, j].isMyTurn = isMyTurn;
             }
     }
 
     private void OnCellPressed(Cell cell)
     {
-        if (cell.playerId != -1)
-            return;
-
-        cell.SetId(playerId);
-        CheckWinner();
-        SwapPlayer();
+        cell.SetId(isMyTurn);
+        lastX = cell.x;
+        lastY = cell.y;
+        SetTurn(false);
+        //CheckWinner();
     }
 
+    /*
     private void CheckWinner()
     {
         int[] rows = new int[_size];
@@ -45,7 +63,7 @@ public class GridController : MonoBehaviour
         for (int i = 0; i < _size; i++)
             for (int j = 0; j < _size; j++)
             {
-                int operation = _grid[i, j].playerId == 1 ? 1 : _grid[i, j].playerId == 0 ? -1 : 0;
+                int operation = _grid[i, j].isMyTurn == 1 ? 1 : _grid[i, j].isMyTurn == 0 ? -1 : 0;
                 rows[i] += operation;
                 cols[j] += operation;
                 if (i == j)
@@ -82,9 +100,21 @@ public class GridController : MonoBehaviour
             }
         }
     }
+    */
 
-    private void SwapPlayer()
+    public void SetTurn(bool turn)
     {
-        playerId = playerId == 0 ? 1 : 0;
+        isMyTurn = turn;
+        
+        foreach (Cell i in _grid)
+        {
+            i.isMyTurn = turn;
+            if (i.active) i.GetComponent<Button>().interactable = turn;
+        }
+    }
+
+    public void ServerHandle_Shoot(int shootX, int shootY)
+    {
+        
     }
 }

@@ -14,6 +14,7 @@ public class MainServerController2 : MonoBehaviour
     private bool gameStarted = false;
     private bool disconnect = false;
     private bool gameEnded = false;
+    public bool gameExited = false;
     private bool fightStarted = false;
     private float gameEndTime = 0.0f;
 
@@ -69,6 +70,10 @@ public class MainServerController2 : MonoBehaviour
         if (disconnect && !gameEnded) // Just a simple disconnect
         {
             SceneManager.LoadScene("Main Menu");
+            if (!gameExited)
+            {
+                ServerHandle_Error(0); // Server error
+            }
             Destroy(gameObject);
         }
         if (gameEnded && Time.realtimeSinceStartup - gameEndTime > 1.5f)
@@ -318,5 +323,6 @@ public class MainServerController2 : MonoBehaviour
     private void ServerHandle_Error(int errorCode)
     {
         // Something here
+        Debug.Log("error;0");
     }
 }

@@ -28,10 +28,22 @@ public class NavButton : MonoBehaviour
 
         if (breakConnection)
         {
-            GameObject[] MainServerController = GameObject.FindGameObjectsWithTag("mainServerController");
-            foreach (GameObject i in MainServerController)
+            GameObject[] MainServerControllers = GameObject.FindGameObjectsWithTag("mainServerController");
+            foreach (GameObject i in MainServerControllers)
             {
-                //i.SetActive(false);
+                i.SetActive(false);
+                MainServerController1 msc1;
+                MainServerController2 msc2;
+                i.TryGetComponent(out msc1);
+                i.TryGetComponent(out msc2);
+                if (msc1 != null)
+                {
+                    msc1.gameExited = true;
+                }
+                if (msc2 != null)
+                {
+                    msc2.gameExited = true;
+                }
                 Destroy(i);
             }
         }
