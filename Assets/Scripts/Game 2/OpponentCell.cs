@@ -60,6 +60,17 @@ public class OpponentCell : MonoBehaviour
         slotManager = slotManagerObject.GetComponent<SlotManager>();
         serverController = serverControllerObject.GetComponent<ServerController>();
 
+        shipObject = new GameObject();
+        shipImage = shipObject.AddComponent<Image>();
+        shipImage.sprite = null;
+        shipImage.enabled = false;
+        shipObject.GetComponent<RectTransform>().SetParent(canvasObject.GetComponent<Transform>());
+        shipObject.transform.SetSiblingIndex(-1);
+        shipObject.GetComponent<RectTransform>().position = transform.position;
+        shipObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+        shipImage.rectTransform.sizeDelta = new Vector2(90, 90);
+        shipObject.SetActive(true);
+
         shootObject = new GameObject();
         shootImage = shootObject.AddComponent<Image>();
         shootImage.sprite = null;
@@ -92,17 +103,6 @@ public class OpponentCell : MonoBehaviour
         cellPaintObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         cellPaintImage.rectTransform.sizeDelta = new Vector2(90, 90);
         cellPaintObject.SetActive(true);
-
-        shipObject = new GameObject();
-        shipImage = shipObject.AddComponent<Image>();
-        shipImage.sprite = null;
-        shipImage.enabled = false;
-        shipObject.GetComponent<RectTransform>().SetParent(canvasObject.GetComponent<Transform>());
-        shipObject.transform.SetSiblingIndex(-1);
-        shipObject.GetComponent<RectTransform>().position = transform.position;
-        shipObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
-        shipImage.rectTransform.sizeDelta = new Vector2(90, 90);
-        shipObject.SetActive(true);
 
         button.interactable = true;
     }
