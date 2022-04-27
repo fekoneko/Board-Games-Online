@@ -714,7 +714,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6a4a68a33d61a44a68fc3ec26f904d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: Game 2
+  sceneName: Queue Screen 2
+  breakConnection: 0
+  mainServerController: {fileID: 0}
 --- !u!114 &1634389388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,4 +1061,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6a4a68a33d61a44a68fc3ec26f904d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: Game 1
+  sceneName: Queue Screen 1
+  breakConnection: 0
+  mainServerController: {fileID: 0}
