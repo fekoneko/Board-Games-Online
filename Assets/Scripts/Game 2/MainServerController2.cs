@@ -103,7 +103,7 @@ public class MainServerController2 : MonoBehaviour
                     ServerHandle_Error(errorCode);
                     break;
 
-                case "started":
+                case "selected":
                     bool isMyTurn;
                     if (sMessage.Length >= 2) // Just in case
                     {
@@ -120,7 +120,7 @@ public class MainServerController2 : MonoBehaviour
                     break;
 
                 /*
-                case "success":
+                case "placed":
                     break;
                 */
 
@@ -135,7 +135,7 @@ public class MainServerController2 : MonoBehaviour
                     }
                     break;
 
-                case "killed":
+                case "destroyed":
                     serverControllerObject = GameObject.FindGameObjectWithTag("serverController");
                     if (sMessage.Length == 1)
                     {
@@ -168,7 +168,7 @@ public class MainServerController2 : MonoBehaviour
                     }
                     break;
 
-                case "injured":
+                case "damaged":
                     serverControllerObject = GameObject.FindGameObjectWithTag("serverController");
                     if (sMessage.Length == 1)
                     {
