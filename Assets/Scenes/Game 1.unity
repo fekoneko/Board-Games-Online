@@ -176,7 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6a4a68a33d61a44a68fc3ec26f904d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: Main Menu
+  sceneName: Main Menu
+  breakConnection: 0
 --- !u!114 &51858057
 MonoBehaviour:
   m_ObjectHideFlags: 0
