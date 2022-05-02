@@ -15,7 +15,7 @@ public class MainServerController2 : MonoBehaviour
     private bool disconnect = false;
     private bool gameEnded = false;
     public bool gameExited = false;
-    private bool fightStarted = false;
+    //private bool fightStarted = false;
     private bool shipsPlaced = false;
     private float gameEndTime = 0.0f;
 
@@ -136,7 +136,7 @@ public class MainServerController2 : MonoBehaviour
                         serverController = serverControllerObject.GetComponent<ServerController>();
                         serverController.ServerHandle_StartBattle();
                         serverController.ChangeTurn(gameStartIsMyTurn);
-                        fightStarted = true;
+                        //fightStarted = true;
                     }
                     break;
 

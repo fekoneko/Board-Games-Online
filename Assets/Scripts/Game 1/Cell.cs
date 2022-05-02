@@ -26,10 +26,15 @@ public class Cell : MonoBehaviour
     [SerializeField] private Sprite circleSprite;
     [SerializeField] private Sprite crossSprite;
     [SerializeField] private Image cellBackground;
-    public void UpdateBackgroundSprite()
+    public bool UpdateBackgroundSprite(bool isMy) // Returns true if circle was placed
     {
-        cellBackground.sprite = isCircle ? circleSprite : crossSprite;
+        if (isMy) cellBackground.sprite = isCircle ? circleSprite : crossSprite;
+        else cellBackground.sprite = isCircle ? crossSprite : circleSprite;
         GetComponent<Button>().interactable = false;
+        cellBackground.color = Color.white;
         active = false;
+
+        if (isMy) return isCircle;
+        else return !isCircle;
     }
 }

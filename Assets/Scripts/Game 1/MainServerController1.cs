@@ -10,7 +10,7 @@ public class MainServerController1 : MonoBehaviour
     private string serverUrl;
     private HubConnection hubConnection;
 
-    private bool gameStartIsMyTurn = false;
+    public bool gameStartIsMyTurn = false;
     private bool gameStarted = false;
     private bool disconnect = false;
     private bool gameEnded = false;
@@ -135,7 +135,7 @@ public class MainServerController1 : MonoBehaviour
                     if (gridControllerObject != null)
                     {
                         gridController = gridControllerObject.GetComponent<GridController>();
-                        gridController._grid[gridController.lastX, gridController.lastY].UpdateBackgroundSprite();
+                        gridController.ServerHandle_Ok();
                     }
                     break;
 
@@ -230,6 +230,13 @@ public class MainServerController1 : MonoBehaviour
     {
         gameResult = win;
         gameEndTime = Time.realtimeSinceStartup;
+
+        GameObject gridControllerObject = GameObject.Find("Grid");
+        if (gridControllerObject != null)
+        {
+            GridController gridController = gridControllerObject.GetComponent<GridController>();
+            if (win != 2) gridController.ShowWinStripe((win == 1) ? true : false);
+        }
     }
 
     private void ServerHandle_Error(int errorCode)
