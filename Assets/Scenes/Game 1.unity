@@ -310,7 +310,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 300}
+  m_SizeDelta: {x: 320, y: 320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &147528690
 MonoBehaviour:
@@ -325,7 +325,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cellPrefab: {fileID: 7382305182519146418, guid: 2c1d3cd4a89432d4cb46c62c25066ffc, type: 3}
-  stripeSprite: {fileID: 21300000, guid: 9df3c6305a7c1d341b68a5b02d0fee09, type: 3}
+  stripeSprites:
+  - {fileID: 21300000, guid: cfdd6debb5974f440a1436756b9e331d, type: 3}
+  - {fileID: 21300000, guid: 1cbed5ef46452b34cb2c8018ac372582, type: 3}
+  - {fileID: 21300000, guid: 7f18650ed68d514449edde4dc92cf7c8, type: 3}
+  - {fileID: 21300000, guid: 5253f3809cada844f8bb59de28b3ce61, type: 3}
   isMyTurn: 0
   isCircle: 1
   lastX: 0
@@ -343,7 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.98039216, g: 0.98039216, b: 0.98039216, a: 1}
+  m_Color: {r: 0.98039216, g: 0.98039216, b: 0.98039216, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -388,8 +392,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 0, y: 0}
+  m_CellSize: {x: 110, y: 110}
+  m_Spacing: {x: -10, y: -10}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &200850289

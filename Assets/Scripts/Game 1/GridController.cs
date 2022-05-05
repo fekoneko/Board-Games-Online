@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GridController : MonoBehaviour
 {
     [SerializeField] private Cell _cellPrefab;
-    [SerializeField] private Sprite stripeSprite;
+    [SerializeField] private Sprite[] stripeSprites; // 4
 
     private Cell[,] _grid;
     private bool[,] circleField;
@@ -16,9 +16,15 @@ public class GridController : MonoBehaviour
     public bool isCircle = true;
     public int lastX = 0;
     public int lastY = 0;
+    private Image[] stripeImage;
+
+    private bool isAnimating = false;
+    private float prAnimationStepTime = 0.0f;
 
     public void Start()
     {
+        stripeImage = new Image[] { null, null, null, null, null, null, null, null };
+
         GameObject mainServerControllerObject = GameObject.FindGameObjectWithTag("mainServerController");
         if (mainServerControllerObject != null)
         {
@@ -155,17 +161,21 @@ public class GridController : MonoBehaviour
         {
             if (stripePostion.Length > 0)
             {
+                int iNum = 0;
                 foreach (Vector2Int[] i in stripePostion)
                 {
                     if (i == null) break;
                     GameObject stripeObject = new GameObject();
-                    Image stripeImage = stripeObject.AddComponent<Image>();
-                    stripeImage.sprite = stripeSprite;
-                    stripeImage.enabled = true;
+                    stripeImage[iNum] = stripeObject.AddComponent<Image>();
+                    isAnimating = true;
+                    prAnimationStepTime = Time.realtimeSinceStartup;
+                    stripeImage[iNum].sprite = null;
+                    stripeImage[iNum].enabled = false;
                     stripeObject.GetComponent<RectTransform>().SetParent(transform.parent); // Not in the grid!
                     stripeObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
                     Strech(stripeObject, _grid[i[0].x, i[0].y].transform.position, _grid[i[1].x, i[1].y].transform.position, false);
                     stripeObject.SetActive(true);
+                    iNum++;
                 }
             }
         }
@@ -224,7 +234,36 @@ public class GridController : MonoBehaviour
         _sprite.transform.right = direction;
         if (_mirrorZ) _sprite.transform.right *= -1f;
         Vector3 scale = new Vector3(1, 1, 1);
-        scale.x = Vector3.Distance(_initialPosition, _finalPosition) * 2.4f / width;
+        scale.x = Vector3.Distance(_initialPosition, _finalPosition) / width * 1.4f; // A little bit wider
         _sprite.transform.localScale = scale;
+    }
+
+    public void Update()
+    {
+        if (isAnimating)
+        {
+            if (Time.realtimeSinceStartup - prAnimationStepTime > 0.045f)
+            {
+                bool atLeastOneStripe = false;
+                int iNum = 0;
+                foreach (Image i in stripeImage)
+                {
+                    if (i != null)
+                    {
+                        if (i.sprite == null) { if (stripeSprites.Length >= 1 && stripeSprites[0] != null) { i.sprite = stripeSprites[0]; i.enabled = true; } }
+                        else if (i.sprite == stripeSprites[0]) { if (stripeSprites.Length >= 2 && stripeSprites[1] != null) i.sprite = stripeSprites[1]; }
+                        else if (i.sprite == stripeSprites[1]) { if (stripeSprites.Length >= 3 && stripeSprites[2] != null) i.sprite = stripeSprites[2]; }
+                        else if (i.sprite == stripeSprites[2]) { if (stripeSprites.Length >= 4 && stripeSprites[3] != null) i.sprite = stripeSprites[3]; }
+                        else stripeImage[iNum] = null; // Remove from animating list
+                        atLeastOneStripe = true;
+                        break; // Draw one by one
+                    }
+                    iNum++;
+                }
+                if (!atLeastOneStripe) isAnimating = false;
+
+                prAnimationStepTime = Time.realtimeSinceStartup;
+            }
+        }
     }
 }

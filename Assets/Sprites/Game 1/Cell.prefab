@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 1.6}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6601373256704001733
 CanvasRenderer:
@@ -61,14 +61,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5659784220791f340b0ac879dfc06e76, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,10 +90,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16bf779a58f1878428c6dbc076284e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCircle: 1
-  circleSprite: {fileID: 21300000, guid: 71aa8c444b5ca0e42bde1ccd5c86ed47, type: 3}
-  crossSprite: {fileID: 21300000, guid: 9df3c6305a7c1d341b68a5b02d0fee09, type: 3}
+  circle1Sprites:
+  - {fileID: 21300000, guid: 1616a474fcc85174bb57eee549e73b95, type: 3}
+  - {fileID: 21300000, guid: f24b1b274c4fb0b4c8d14b742d23af2a, type: 3}
+  - {fileID: 21300000, guid: 292c1275576e159418bac0d4773e764c, type: 3}
+  - {fileID: 21300000, guid: 43d1977544542a24eb1e5ccfe8eb705c, type: 3}
+  circle2Sprites:
+  - {fileID: 21300000, guid: 2188f1ee221e92542962e038fcfb01c6, type: 3}
+  - {fileID: 21300000, guid: 92986f26d6c9a6d4088ebe221fd80ca9, type: 3}
+  - {fileID: 21300000, guid: d8e7ee30f965ac1498514ffd58b2da8a, type: 3}
+  - {fileID: 21300000, guid: 062924431feec0444babbd7ee81c49a6, type: 3}
+  circle3Sprites:
+  - {fileID: 21300000, guid: 16eb193889ac5684387accaf5d492f7e, type: 3}
+  - {fileID: 21300000, guid: b9d7430fbc9119e4e8532b5d6357b622, type: 3}
+  - {fileID: 21300000, guid: 1d22553a1c33abe45ba8a05d4c7c834c, type: 3}
+  - {fileID: 21300000, guid: 7af7760c06585cd429ca0041477ac8ec, type: 3}
+  cross1Sprites:
+  - {fileID: 21300000, guid: b9e6503f8c98dd5489f9b94600f941cb, type: 3}
+  - {fileID: 21300000, guid: b335b6f65c8465c438a28869a74281a6, type: 3}
+  - {fileID: 21300000, guid: bb1afd9cd8cc2884ca21675967121a70, type: 3}
+  - {fileID: 21300000, guid: efc6f85be2dd323409dfe763ac864aaa, type: 3}
+  cross2Sprites:
+  - {fileID: 21300000, guid: bcdae05ab6237df48b3e626ec68429b9, type: 3}
+  - {fileID: 21300000, guid: 4adb0c6e9cc9f6f4c9bbc94c42c20252, type: 3}
+  - {fileID: 21300000, guid: 20f4f57aeaa7fd241b82d0298b873644, type: 3}
+  - {fileID: 21300000, guid: 5890d78e2f5455247b15eb16754b61cd, type: 3}
+  cross3Sprites:
+  - {fileID: 21300000, guid: f322a29c2e6c5a640b38ac89593cc513, type: 3}
+  - {fileID: 21300000, guid: 56eaa851f1ea0e64c80eab309307c939, type: 3}
+  - {fileID: 21300000, guid: cd1bff4a5aae02a4998e496b4b9e986f, type: 3}
+  - {fileID: 21300000, guid: 83d8849b8bef1904d96985d9df1908a0, type: 3}
   cellBackground: {fileID: 8612190825390859510}
+  isCircle: 1
+  active: 1
+  isMyTurn: 0
+  x: 0
+  y: 0
 --- !u!114 &892718558904221164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,10 +148,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
