@@ -32,7 +32,7 @@ public class Cell : MonoBehaviour
         cellFigureObject.GetComponent<RectTransform>().SetParent(this.transform);
         cellFigureObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
         cellFigureObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
-        cellFigure.rectTransform.sizeDelta = new Vector2(100, 100);
+        cellFigure.rectTransform.sizeDelta = new Vector2(220, 220);
         cellFigureObject.SetActive(true);
     }
 

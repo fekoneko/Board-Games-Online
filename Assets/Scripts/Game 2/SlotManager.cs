@@ -16,6 +16,9 @@ public class SlotManager : MonoBehaviour
     [SerializeField] private GameObject[] cells8;
     [SerializeField] private GameObject[] cells9;
 
+    [SerializeField] public TurnTimer turnTimer;
+    [SerializeField] private bool areOpponentCells = false;
+
     public GameObject[][] cells;
 
     public int lastShootX = -1; // For opponent cells
@@ -46,11 +49,20 @@ public class SlotManager : MonoBehaviour
         Array.Copy(cells9, cells[9], 10);
     }
 
+    public void Start()
+    {
+        if (!areOpponentCells)
+        {
+            turnTimer.ShowTimer(90.0f);
+        }
+    }
+
 
     // For DragDrop
 
     public void SetAvailableShow(bool en)
     {
+        if (areOpponentCells) return;
         foreach (GameObject[] j in cells)
         {
             foreach (GameObject i in j)
@@ -68,6 +80,7 @@ public class SlotManager : MonoBehaviour
 
     public void SetButtonState(bool en)
     {
+        if (!areOpponentCells) return;
         foreach (GameObject[] j in cells)
         {
             foreach (GameObject i in j)

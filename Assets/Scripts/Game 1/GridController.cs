@@ -7,6 +7,8 @@ public class GridController : MonoBehaviour
 {
     [SerializeField] private Cell _cellPrefab;
     [SerializeField] private Sprite[] stripeSprites; // 4
+    [SerializeField] public TurnTimer turnTimer;
+    [SerializeField] public TurnTimer opponentTurnTimer;
 
     private Cell[,] _grid;
     private bool[,] circleField;
@@ -126,6 +128,17 @@ public class GridController : MonoBehaviour
             i.isMyTurn = turn;
             if (i.active) i.GetComponent<Button>().interactable = turn;
         }
+
+        if (turn)
+        {
+            turnTimer.ShowTimer(30.0f);
+            opponentTurnTimer.HideTimer();
+        }
+        else
+        {
+            opponentTurnTimer.ShowTimer(30.0f);
+            turnTimer.HideTimer();
+        }
     }
 
     public void ServerHandle_Shoot(int shootX, int shootY)
@@ -234,7 +247,7 @@ public class GridController : MonoBehaviour
         _sprite.transform.right = direction;
         if (_mirrorZ) _sprite.transform.right *= -1f;
         Vector3 scale = new Vector3(1, 1, 1);
-        scale.x = Vector3.Distance(_initialPosition, _finalPosition) / width * 1.4f; // A little bit wider
+        scale.x = Vector3.Distance(_initialPosition, _finalPosition) / width * 1.5f; // A little bit wider
         _sprite.transform.localScale = scale;
     }
 

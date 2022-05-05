@@ -127,6 +127,14 @@ public class MainServerController2 : MonoBehaviour
 
                 case "placed":
                     shipsPlaced = true;
+
+                    serverControllerObject = GameObject.FindGameObjectWithTag("serverController");
+                    if (serverControllerObject != null)
+                    {
+                        serverController = serverControllerObject.GetComponent<ServerController>();
+                        serverController.slotManager.turnTimer.HideTimer();
+                        serverController.opponentSlotManager.turnTimer.HideTimer(); // Just in case
+                    }
                     break;
 
                 case "fight":
@@ -318,6 +326,15 @@ public class MainServerController2 : MonoBehaviour
     {
         gameResult = win;
         gameEndTime = Time.realtimeSinceStartup;
+
+        GameObject serverControllerObject = GameObject.FindGameObjectWithTag("serverController");
+        if (serverControllerObject != null)
+        {
+            ServerController serverController = serverControllerObject.GetComponent<ServerController>();
+            serverController.slotManager.turnTimer.HideTimer();
+            serverController.opponentSlotManager.turnTimer.HideTimer();
+            serverController.opponentSlotManager.SetButtonState(false);
+        }
     }
 
     private void ServerHandle_Error(int errorCode)

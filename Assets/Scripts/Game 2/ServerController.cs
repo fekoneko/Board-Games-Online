@@ -12,8 +12,8 @@ public class ServerController : MonoBehaviour
     [SerializeField] private GameObject readyButtonObject;
 
     private ShipManager shipManager;
-    private SlotManager slotManager;
-    private SlotManager opponentSlotManager;
+    public SlotManager slotManager;
+    public SlotManager opponentSlotManager;
     private ReadyButton readyButton;
     private MainServerController2 mainServerController;
 
@@ -63,10 +63,12 @@ public class ServerController : MonoBehaviour
                     break;
                 case "damaged":
                     opponentSlotManager.cells[opponentSlotManager.lastShootX][opponentSlotManager.lastShootY].GetComponent<OpponentCell>().MakeDamaged();
+                    ChangeTurn(true);
                     break;
                 case "killed":
                     opponentSlotManager.cells[opponentSlotManager.lastShootX][opponentSlotManager.lastShootY].GetComponent<OpponentCell>().MakeDamaged();
                     DisplayKilledShip(opponentSlotManager.lastShootX, opponentSlotManager.lastShootY);
+                    ChangeTurn(true);
                     break;
             }
         }
@@ -86,10 +88,12 @@ public class ServerController : MonoBehaviour
                 break;
             case "damaged":
                 slotManager.cells[shootY][shootX].GetComponent<ShipSlot>().MakeDamaged();
+                ChangeTurn(false);
                 break;
             case "killed":
                 slotManager.cells[shootY][shootX].GetComponent<ShipSlot>().MakeDamaged();
                 DisplayMyKilledShip(shootY, shootX);
+                ChangeTurn(false);
                 break;
         }
     }
@@ -122,7 +126,17 @@ public class ServerController : MonoBehaviour
     public void ChangeTurn(bool turn)
     {
         isMyTurn = turn;
-        opponentSlotManager.SetButtonState(isMyTurn);
+        opponentSlotManager.SetButtonState(turn);
+        if (turn)
+        {
+            opponentSlotManager.turnTimer.ShowTimer(30.0f);
+            slotManager.turnTimer.HideTimer();
+        }
+        else
+        {
+            slotManager.turnTimer.ShowTimer(30.0f);
+            opponentSlotManager.turnTimer.HideTimer();
+        }
     }
 
 

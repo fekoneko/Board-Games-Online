@@ -125,7 +125,7 @@ public class MainServerController1 : MonoBehaviour
                     if (gridControllerObject != null)
                     {
                         gridController = gridControllerObject.GetComponent<GridController>();
-                        gridController.isMyTurn = isMyTurn;
+                        gridController.SetTurn(isMyTurn);
                         gridController.isCircle = !isMyTurn;
                     }
                     break;
@@ -236,6 +236,9 @@ public class MainServerController1 : MonoBehaviour
         {
             GridController gridController = gridControllerObject.GetComponent<GridController>();
             if (win != 2) gridController.ShowWinStripe((win == 1) ? true : false);
+
+            gridController.turnTimer.HideTimer();
+            gridController.opponentTurnTimer.HideTimer();
         }
     }
 
