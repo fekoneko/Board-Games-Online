@@ -34,7 +34,7 @@ public class MainServerController2 : MonoBehaviour
             else
             {
                 //System.IO.File.CreateText(path);
-                serverUrl = "http://localhost:5000/shipbattle";
+                serverUrl = "http://89.108.114.113/shipbattle";
                 System.IO.File.WriteAllText(path, serverUrl);
             }
 

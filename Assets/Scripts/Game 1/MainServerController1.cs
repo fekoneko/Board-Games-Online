@@ -32,7 +32,7 @@ public class MainServerController1 : MonoBehaviour
             else
             {
                 //System.IO.File.CreateText(path);
-                serverUrl = "http://localhost:5000/ticktacktoe";
+                serverUrl = "http://89.108.114.113/ticktacktoe";
                 System.IO.File.WriteAllText(path, serverUrl);
             }
 
