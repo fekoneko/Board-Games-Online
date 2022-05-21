@@ -4,14 +4,14 @@
  
  ## Download links
  
- | __Target Platform__ | __Download link__                                                                            |
- | ------------------: |:--------------------------------------------------------------------------------------------:|
- | `Android`           | [Download](https://drive.google.com/uc?export=download&id=1gzb3VHKtK_4d9Wv1nv20WRzjz1p5gn8U) |
- | `iOS`               | [Download](https://drive.google.com/uc?export=download&id=1fL3lgZE5KEdBqYVUvFAMpLaEuiRozkCO) |
- | `Windows x64`       | [Download](https://drive.google.com/uc?export=download&id=1hKhSDizL2C__rOvIomDgTAQkB9LjjNCn) |
- | `Windows x86`       | [Download](https://drive.google.com/uc?export=download&id=1k7cMU8aHPi8Ese3W-5pL-Vq9WQqNVSLv) |
- | `Mac OS`            | [Download](https://drive.google.com/uc?export=download&id=1S0Xsoh0lcOrBBnVGV0_b5Peu7Skozs_c) |
- | `Linux`             | [Download](https://drive.google.com/uc?export=download&id=19wk5X01q52JYpmwBOxXDLP3lPP-swaH1) |
+ | __Target Platform__ | __Download link__                                                                              |
+ | ------------------: |:----------------------------------------------------------------------------------------------:|
+ | `Android`           | [Download](https://drive.google.com/file/d/1gzb3VHKtK_4d9Wv1nv20WRzjz1p5gn8U/view?usp=sharing) |
+ | `iOS`               | [Download](https://drive.google.com/file/d/1fL3lgZE5KEdBqYVUvFAMpLaEuiRozkCO/view?usp=sharing) |
+ | `Windows x64`       | [Download](https://drive.google.com/file/d/1hKhSDizL2C__rOvIomDgTAQkB9LjjNCn/view?usp=sharing) |
+ | `Windows x86`       | [Download](https://drive.google.com/file/d/1k7cMU8aHPi8Ese3W-5pL-Vq9WQqNVSLv/view?usp=sharing) |
+ | `Mac OS`            | [Download](https://drive.google.com/file/d/1S0Xsoh0lcOrBBnVGV0_b5Peu7Skozs_c/view?usp=sharing) |
+ | `Linux`             | [Download](https://drive.google.com/file/d/19wk5X01q52JYpmwBOxXDLP3lPP-swaH1/view?usp=sharing) |
  
  ## Screenshots
  
