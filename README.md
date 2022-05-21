@@ -4,10 +4,10 @@
  
  ## Download links
  
- | __Target Platform__ | __Download link__                                                                          |
+ | __Target Platform__ | __Download link__                                                                            |
  | ------------------: |:--------------------------------------------------------------------------------------------:|
  | `Android`           | [Download](https://drive.google.com/uc?export=download&id=1gzb3VHKtK_4d9Wv1nv20WRzjz1p5gn8U) |
- | `IOS`               | [Download](https://drive.google.com/uc?export=download&id=1fL3lgZE5KEdBqYVUvFAMpLaEuiRozkCO) |
+ | `iOS`               | [Download](https://drive.google.com/uc?export=download&id=1fL3lgZE5KEdBqYVUvFAMpLaEuiRozkCO) |
  | `Windows x64`       | [Download](https://drive.google.com/uc?export=download&id=1hKhSDizL2C__rOvIomDgTAQkB9LjjNCn) |
  | `Windows x86`       | [Download](https://drive.google.com/uc?export=download&id=1k7cMU8aHPi8Ese3W-5pL-Vq9WQqNVSLv) |
  | `Mac OS`            | [Download](https://drive.google.com/uc?export=download&id=1S0Xsoh0lcOrBBnVGV0_b5Peu7Skozs_c) |
